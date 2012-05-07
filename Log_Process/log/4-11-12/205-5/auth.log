@@ -1,0 +1,450 @@
+Apr  8 19:30:00 dorm newsyslog[87178]: logfile turned over due to size>100K
+Apr  8 21:04:59 dorm sshd[89501]: Accepted keyboard-interactive/pam for tjs from 140.117.205.245 port 38582 ssh2
+Apr  8 21:05:05 dorm sshd[89504]: Received disconnect from 140.117.205.245: 11: disconnected by user
+Apr  9 01:35:01 dorm saslauthd[644]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:03 dorm saslauthd[625]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:06 dorm saslauthd[643]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:08 dorm saslauthd[641]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:10 dorm saslauthd[642]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:13 dorm saslauthd[644]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:15 dorm saslauthd[625]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:18 dorm saslauthd[643]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:20 dorm saslauthd[641]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:22 dorm saslauthd[642]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:25 dorm saslauthd[644]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:27 dorm saslauthd[625]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:29 dorm saslauthd[643]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:32 dorm saslauthd[641]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:34 dorm saslauthd[642]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 01:35:37 dorm saslauthd[644]: do_auth         : auth failure: [user=root] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 02:24:35 dorm sshd[97513]: Did not receive identification string from 125.88.112.42
+Apr  9 02:46:32 dorm saslauthd[625]: do_auth         : auth failure: [user=c8741606] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 07:38:30 dorm sshd[8125]: Invalid user p2ptest from 218.108.224.81
+Apr  9 07:38:38 dorm sshd[8133]: Invalid user p2ptest from 218.108.224.81
+Apr  9 07:38:40 dorm sshd[8135]: Invalid user p2ptest from 218.108.224.81
+Apr  9 07:38:50 dorm sshd[8145]: Invalid user ice from 218.108.224.81
+Apr  9 07:38:58 dorm sshd[8153]: Invalid user ST1 from 218.108.224.81
+Apr  9 07:39:00 dorm sshd[8155]: Invalid user ghost from 218.108.224.81
+Apr  9 07:39:11 dorm sshd[8170]: Invalid user cron from 218.108.224.81
+Apr  9 07:39:13 dorm sshd[8172]: Invalid user cron from 218.108.224.81
+Apr  9 07:39:15 dorm sshd[8174]: Invalid user cron from 218.108.224.81
+Apr  9 07:39:17 dorm sshd[8176]: Invalid user cron from 218.108.224.81
+Apr  9 07:39:19 dorm sshd[8178]: Invalid user cron from 218.108.224.81
+Apr  9 07:39:21 dorm sshd[8180]: Invalid user cron from 218.108.224.81
+Apr  9 07:39:33 dorm sshd[8193]: Invalid user kelvin from 218.108.224.81
+Apr  9 07:39:35 dorm sshd[8195]: Invalid user boysgirls from 218.108.224.81
+Apr  9 07:39:43 dorm sshd[8203]: Invalid user oracle from 218.108.224.81
+Apr  9 07:39:44 dorm sshd[8205]: Invalid user sk2839 from 218.108.224.81
+Apr  9 07:39:58 dorm sshd[8219]: Invalid user sxl from 218.108.224.81
+Apr  9 07:40:02 dorm sshd[8223]: Invalid user monitor from 218.108.224.81
+Apr  9 07:40:04 dorm sshd[8264]: Invalid user support from 218.108.224.81
+Apr  9 07:40:12 dorm sshd[8272]: Invalid user cvsroot from 218.108.224.81
+Apr  9 07:40:25 dorm sshd[8286]: Invalid user cgi from 218.108.224.81
+Apr  9 07:40:27 dorm sshd[8288]: Invalid user enforce from 218.108.224.81
+Apr  9 07:40:31 dorm sshd[8292]: Invalid user db2adm1 from 218.108.224.81
+Apr  9 07:40:41 dorm sshd[8302]: Invalid user apache from 218.108.224.81
+Apr  9 07:40:52 dorm sshd[8314]: Invalid user root2 from 218.108.224.81
+Apr  9 07:40:54 dorm sshd[8316]: Invalid user admin from 218.108.224.81
+Apr  9 07:41:02 dorm sshd[8324]: Invalid user mgoodyear from 218.108.224.81
+Apr  9 07:41:06 dorm sshd[8328]: Invalid user sas from 218.108.224.81
+Apr  9 07:41:10 dorm sshd[8332]: Invalid user code from 218.108.224.81
+Apr  9 07:41:14 dorm sshd[8336]: Invalid user code from 218.108.224.81
+Apr  9 07:41:18 dorm sshd[8340]: Invalid user fkarim from 218.108.224.81
+Apr  9 07:41:25 dorm sshd[8348]: Invalid user daniel from 218.108.224.81
+Apr  9 07:41:27 dorm sshd[8350]: Invalid user 80tras from 218.108.224.81
+Apr  9 07:41:29 dorm sshd[8352]: Invalid user ejofre from 218.108.224.81
+Apr  9 07:41:31 dorm sshd[8354]: Invalid user ramigo from 218.108.224.81
+Apr  9 07:41:33 dorm sshd[8356]: Invalid user rramirez from 218.108.224.81
+Apr  9 07:41:35 dorm sshd[8358]: Invalid user unabv from 218.108.224.81
+Apr  9 07:41:45 dorm sshd[8368]: Invalid user oracle from 218.108.224.81
+Apr  9 07:41:47 dorm sshd[8370]: Invalid user test from 218.108.224.81
+Apr  9 07:41:49 dorm sshd[8372]: Invalid user info from 218.108.224.81
+Apr  9 07:41:53 dorm sshd[8376]: Invalid user test1 from 218.108.224.81
+Apr  9 07:41:55 dorm sshd[8378]: Invalid user checka from 218.108.224.81
+Apr  9 07:41:59 dorm sshd[8393]: Invalid user test from 218.108.224.81
+Apr  9 07:42:01 dorm sshd[8396]: Invalid user oracle from 218.108.224.81
+Apr  9 07:42:06 dorm sshd[8405]: Invalid user wangls from 218.108.224.81
+Apr  9 07:42:08 dorm sshd[8407]: Invalid user dissh_moni from 218.108.224.81
+Apr  9 07:42:12 dorm sshd[8411]: Invalid user walkman from 218.108.224.81
+Apr  9 07:42:16 dorm sshd[8420]: Invalid user root2 from 218.108.224.81
+Apr  9 07:42:18 dorm sshd[8422]: Invalid user dss from 218.108.224.81
+Apr  9 07:42:47 dorm sshd[8452]: Invalid user farmapos from 218.108.224.81
+Apr  9 07:42:49 dorm sshd[8454]: Invalid user fax from 218.108.224.81
+Apr  9 07:42:51 dorm sshd[8456]: Invalid user christiane from 218.108.224.81
+Apr  9 07:42:53 dorm sshd[8458]: Invalid user francois from 218.108.224.81
+Apr  9 07:43:02 dorm sshd[8481]: Invalid user eduardo from 218.108.224.81
+Apr  9 07:43:06 dorm sshd[8485]: Invalid user pbwith from 218.108.224.81
+Apr  9 07:43:12 dorm sshd[8491]: Invalid user chenlm from 218.108.224.81
+Apr  9 07:43:14 dorm sshd[8493]: Invalid user libo from 218.108.224.81
+Apr  9 07:43:28 dorm sshd[8507]: Invalid user system from 218.108.224.81
+Apr  9 07:43:32 dorm sshd[8511]: Invalid user dissh_moni from 218.108.224.81
+Apr  9 07:43:53 dorm sshd[8533]: Invalid user kylix from 218.108.224.81
+Apr  9 07:43:55 dorm sshd[8535]: Invalid user mov from 218.108.224.81
+Apr  9 07:43:57 dorm sshd[8537]: Invalid user be from 218.108.224.81
+Apr  9 07:43:59 dorm sshd[8539]: Invalid user richard from 218.108.224.81
+Apr  9 08:50:39 dorm sshd[10411]: Accepted keyboard-interactive/pam for c8523016 from 211.23.128.169 port 35566 ssh2
+Apr  9 09:16:49 dorm sshd[11108]: Accepted keyboard-interactive/pam for tjs from 140.117.205.245 port 33918 ssh2
+Apr  9 09:16:54 dorm sshd[11111]: Received disconnect from 140.117.205.245: 11: disconnected by user
+Apr  9 09:37:08 dorm sshd[11690]: Did not receive identification string from 173.192.142.34
+Apr  9 10:18:29 dorm sshd[12742]: Accepted keyboard-interactive/pam for abaw from 59.124.251.135 port 38531 ssh2
+Apr  9 10:34:24 dorm sshd[13199]: Accepted keyboard-interactive/pam for minyen from 61.64.143.131 port 1738 ssh2
+Apr  9 10:34:35 dorm sshd[13206]: error: PAM: authentication error for minyen from 61.64.143.131
+Apr  9 10:34:38 dorm sshd[13206]: Accepted keyboard-interactive/pam for minyen from 61.64.143.131 port 1740 ssh2
+Apr  9 11:19:15 dorm sshd[14356]: Accepted keyboard-interactive/pam for tjs from 140.117.205.245 port 39882 ssh2
+Apr  9 11:19:18 dorm sshd[14359]: Received disconnect from 140.117.205.245: 11: disconnected by user
+Apr  9 11:43:04 dorm sshd[15040]: error: PAM: authentication error for git from 2001:288:8001:d600:214:85ff:fe27:7667
+Apr  9 11:43:10 dorm last message repeated 2 times
+Apr  9 11:43:16 dorm sshd[15057]: error: PAM: authentication error for git from 2001:288:8001:d600:214:85ff:fe27:7667
+Apr  9 11:43:23 dorm last message repeated 2 times
+Apr  9 12:10:58 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:01 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:04 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:08 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:11 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:13 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:16 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:19 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:22 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:25 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:28 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:31 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:34 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:37 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:39 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:42 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:44 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:47 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:49 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:52 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:55 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:11:57 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:00 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:02 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:05 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:08 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:11 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:14 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:17 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:23 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:25 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:28 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:31 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:33 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:36 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:38 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:41 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:44 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:47 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:50 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:53 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:55 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:12:58 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:13:00 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:13:03 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:13:05 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:13:08 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:13:11 dorm saslauthd[642]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:13:14 dorm saslauthd[644]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 12:13:16 dorm saslauthd[625]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=cdpa.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr  9 13:56:08 dorm sshd[18703]: Accepted keyboard-interactive/pam for c8523016 from 211.23.128.169 port 36848 ssh2
+Apr  9 14:20:20 dorm sshd[19324]: Did not receive identification string from 216.196.182.91
+Apr  9 15:41:47 dorm saslauthd[643]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 15:41:56 dorm saslauthd[641]: do_auth         : auth failure: [user=tjs] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr  9 16:14:18 dorm sshd[22449]: Invalid user network from 216.196.182.91
+Apr  9 16:14:22 dorm sshd[22454]: Invalid user pgsql from 216.196.182.91
+Apr  9 16:14:31 dorm sshd[22462]: Invalid user liviu from 216.196.182.91
+Apr  9 16:14:33 dorm sshd[22464]: Invalid user liviu from 216.196.182.91
+Apr  9 16:14:36 dorm sshd[22466]: Invalid user sanda from 216.196.182.91
+Apr  9 16:14:42 dorm sshd[22472]: Invalid user password from 216.196.182.91
+Apr  9 16:14:47 dorm sshd[22476]: Invalid user user from 216.196.182.91
+Apr  9 16:14:49 dorm sshd[22478]: Invalid user ftp from 216.196.182.91
+Apr  9 16:14:52 dorm sshd[22480]: Invalid user master from 216.196.182.91
+Apr  9 16:14:54 dorm sshd[22485]: Invalid user ftp from 216.196.182.91
+Apr  9 16:14:56 dorm sshd[22487]: Invalid user master from 216.196.182.91
+Apr  9 16:14:58 dorm sshd[22489]: Invalid user fluffy from 216.196.182.91
+Apr  9 16:15:03 dorm sshd[22547]: Invalid user fluffy from 216.196.182.91
+Apr  9 16:15:05 dorm sshd[22549]: Invalid user admin from 216.196.182.91
+Apr  9 16:15:07 dorm sshd[22551]: Invalid user test from 216.196.182.91
+Apr  9 16:15:09 dorm sshd[22553]: Invalid user guest from 216.196.182.91
+Apr  9 16:15:11 dorm sshd[22555]: Invalid user webmaster from 216.196.182.91
+Apr  9 16:15:16 dorm sshd[22566]: Invalid user oracle from 216.196.182.91
+Apr  9 16:15:18 dorm sshd[22568]: Invalid user library from 216.196.182.91
+Apr  9 16:15:21 dorm sshd[22570]: Invalid user info from 216.196.182.91
+Apr  9 16:15:23 dorm sshd[22572]: Invalid user shell from 216.196.182.91
+Apr  9 16:15:25 dorm sshd[22575]: Invalid user linux from 216.196.182.91
+Apr  9 16:15:27 dorm sshd[22577]: Invalid user unix from 216.196.182.91
+Apr  9 16:15:29 dorm sshd[22579]: Invalid user webadmin from 216.196.182.91
+Apr  9 16:15:31 dorm sshd[22581]: Invalid user ftp from 216.196.182.91
+Apr  9 16:15:34 dorm sshd[22583]: Invalid user test from 216.196.182.91
+Apr  9 16:15:38 dorm sshd[22587]: Invalid user admin from 216.196.182.91
+Apr  9 16:15:40 dorm sshd[22589]: Invalid user guest from 216.196.182.91
+Apr  9 16:15:43 dorm sshd[22592]: Invalid user master from 216.196.182.91
+Apr  9 16:15:45 dorm sshd[22594]: Invalid user apache from 216.196.182.91
+Apr  9 16:15:51 dorm sshd[22600]: Invalid user network from 216.196.182.91
+Apr  9 16:15:54 dorm sshd[22602]: Invalid user word from 216.196.182.91
+Apr  9 16:16:29 dorm sshd[22643]: Invalid user admin from 216.196.182.91
+Apr  9 16:16:32 dorm sshd[22645]: Invalid user admin from 216.196.182.91
+Apr  9 16:16:34 dorm sshd[22647]: Invalid user admin from 216.196.182.91
+Apr  9 16:16:36 dorm sshd[22649]: Invalid user admin from 216.196.182.91
+Apr  9 16:16:43 dorm sshd[22656]: Invalid user test from 216.196.182.91
+Apr  9 16:16:45 dorm sshd[22658]: Invalid user test from 216.196.182.91
+Apr  9 16:16:47 dorm sshd[22661]: Invalid user webmaster from 216.196.182.91
+Apr  9 16:16:49 dorm sshd[22663]: Invalid user user from 216.196.182.91
+Apr  9 16:16:52 dorm sshd[22665]: Invalid user username from 216.196.182.91
+Apr  9 16:16:54 dorm sshd[22667]: Invalid user username from 216.196.182.91
+Apr  9 16:16:56 dorm sshd[22669]: Invalid user user from 216.196.182.91
+Apr  9 16:17:00 dorm sshd[22687]: Invalid user admin from 216.196.182.91
+Apr  9 16:17:03 dorm sshd[22689]: Invalid user test from 216.196.182.91
+Apr  9 16:17:14 dorm sshd[22703]: Invalid user danny from 216.196.182.91
+Apr  9 16:17:16 dorm sshd[22705]: Invalid user sharon from 216.196.182.91
+Apr  9 16:17:19 dorm sshd[22707]: Invalid user aron from 216.196.182.91
+Apr  9 16:17:21 dorm sshd[22716]: Invalid user alex from 216.196.182.91
+Apr  9 16:17:23 dorm sshd[22718]: Invalid user brett from 216.196.182.91
+Apr  9 16:17:25 dorm sshd[22720]: Invalid user mike from 216.196.182.91
+Apr  9 16:17:28 dorm sshd[22722]: Invalid user alan from 216.196.182.91
+Apr  9 16:17:30 dorm sshd[22724]: Invalid user data from 216.196.182.91
+Apr  9 16:17:32 dorm sshd[22726]: Invalid user www-data from 216.196.182.91
+Apr  9 16:17:35 dorm sshd[22728]: Invalid user http from 216.196.182.91
+Apr  9 16:17:37 dorm sshd[22730]: Invalid user httpd from 216.196.182.91
+Apr  9 16:17:43 dorm sshd[22736]: Invalid user backup from 216.196.182.91
+Apr  9 16:17:46 dorm sshd[22739]: Invalid user info from 216.196.182.91
+Apr  9 16:17:48 dorm sshd[22741]: Invalid user shop from 216.196.182.91
+Apr  9 16:17:50 dorm sshd[22750]: Invalid user sales from 216.196.182.91
+Apr  9 16:17:52 dorm sshd[22752]: Invalid user web from 216.196.182.91
+Apr  9 16:17:56 dorm sshd[22756]: Invalid user wwwrun from 216.196.182.91
+Apr  9 16:17:59 dorm sshd[22758]: Invalid user adam from 216.196.182.91
+Apr  9 16:18:01 dorm sshd[22760]: Invalid user stephen from 216.196.182.91
+Apr  9 16:18:03 dorm sshd[22777]: Invalid user richard from 216.196.182.91
+Apr  9 16:18:05 dorm sshd[22779]: Invalid user george from 216.196.182.91
+Apr  9 16:18:08 dorm sshd[22781]: Invalid user michael from 216.196.182.91
+Apr  9 16:18:10 dorm sshd[22783]: Invalid user john from 216.196.182.91
+Apr  9 16:18:12 dorm sshd[22785]: Invalid user david from 216.196.182.91
+Apr  9 16:18:15 dorm sshd[22787]: Invalid user paul from 216.196.182.91
+Apr  9 16:18:22 dorm sshd[22791]: Invalid user angel from 216.196.182.91
+Apr  9 16:18:28 dorm sshd[22795]: Invalid user pgsql from 216.196.182.91
+Apr  9 16:18:30 dorm sshd[22797]: Invalid user pgsql from 216.196.182.91
+Apr  9 16:18:33 dorm sshd[22800]: Invalid user mail from 216.196.182.91
+Apr  9 16:18:35 dorm sshd[22808]: Invalid user adm from 216.196.182.91
+Apr  9 16:18:37 dorm sshd[22811]: Invalid user ident from 216.196.182.91
+Apr  9 16:18:39 dorm sshd[22814]: Invalid user resin from 216.196.182.91
+Apr  9 16:18:41 dorm sshd[22816]: Invalid user mikael from 216.196.182.91
+Apr  9 16:18:44 dorm sshd[22818]: Invalid user mike from 216.196.182.91
+Apr  9 16:18:46 dorm sshd[22820]: Invalid user suva from 216.196.182.91
+Apr  9 16:18:48 dorm sshd[22822]: Invalid user webpop from 216.196.182.91
+Apr  9 16:18:53 dorm sshd[22825]: Invalid user technicom from 216.196.182.91
+Apr  9 16:18:55 dorm sshd[22833]: Invalid user susan from 216.196.182.91
+Apr  9 16:18:58 dorm sshd[22835]: Invalid user sunsun from 216.196.182.91
+Apr  9 16:18:58 dorm sshd[22837]: Did not receive identification string from 216.196.182.91
+Apr  9 16:19:02 dorm sshd[22840]: Invalid user sunny from 216.196.182.91
+Apr  9 16:19:04 dorm sshd[22842]: Invalid user steven from 216.196.182.91
+Apr  9 16:19:06 dorm sshd[22846]: Invalid user ssh from 216.196.182.91
+Apr  9 16:19:08 dorm sshd[22850]: Invalid user search from 216.196.182.91
+Apr  9 16:19:11 dorm sshd[22852]: Invalid user sara from 216.196.182.91
+Apr  9 16:19:13 dorm sshd[22854]: Invalid user robert from 216.196.182.91
+Apr  9 16:19:15 dorm sshd[22856]: Invalid user richard from 216.196.182.91
+Apr  9 16:19:18 dorm sshd[22858]: Invalid user postmaster from 216.196.182.91
+Apr  9 16:19:20 dorm sshd[22860]: Invalid user party from 216.196.182.91
+Apr  9 16:19:22 dorm sshd[22862]: Invalid user michael from 216.196.182.91
+Apr  9 16:19:24 dorm sshd[22864]: Invalid user amanda from 216.196.182.91
+Apr  9 16:19:29 dorm sshd[22868]: Invalid user rpm from 216.196.182.91
+Apr  9 16:19:33 dorm sshd[22872]: Invalid user sgi from 216.196.182.91
+Apr  9 16:19:36 dorm sshd[22874]: Invalid user Aaliyah from 216.196.182.91
+Apr  9 16:19:38 dorm sshd[22876]: Invalid user Aaron from 216.196.182.91
+Apr  9 16:19:43 dorm sshd[22878]: Invalid user Aba from 216.196.182.91
+Apr  9 16:19:46 dorm sshd[22880]: Invalid user Abel from 216.196.182.91
+Apr  9 16:19:48 dorm sshd[22882]: Invalid user Jewel from 216.196.182.91
+Apr  9 16:19:53 dorm sshd[22886]: Invalid user users from 216.196.182.91
+Apr  9 16:19:55 dorm sshd[22888]: Invalid user admins from 216.196.182.91
+Apr  9 16:19:57 dorm sshd[22890]: Invalid user admins from 216.196.182.91
+Apr  9 16:19:59 dorm sshd[22892]: Invalid user Zmeu from 216.196.182.91
+Apr  9 16:20:04 dorm sshd[22935]: Invalid user michi from 216.196.182.91
+Apr  9 16:20:06 dorm sshd[22937]: Invalid user add from 216.196.182.91
+Apr  9 16:20:08 dorm sshd[22939]: Invalid user michael from 216.196.182.91
+Apr  9 16:20:11 dorm sshd[22941]: Invalid user adrian from 216.196.182.91
+Apr  9 16:20:13 dorm sshd[22943]: Invalid user Ionut from 216.196.182.91
+Apr  9 16:20:15 dorm sshd[22945]: Invalid user telnet from 216.196.182.91
+Apr  9 16:20:17 dorm sshd[22947]: Invalid user irc from 216.196.182.91
+Apr  9 16:20:19 dorm sshd[22949]: Invalid user bnc from 216.196.182.91
+Apr  9 16:20:22 dorm sshd[22951]: Invalid user psybnc from 216.196.182.91
+Apr  9 16:20:24 dorm sshd[22953]: Invalid user is from 216.196.182.91
+Apr  9 16:20:26 dorm sshd[22955]: Invalid user Exit from 216.196.182.91
+Apr  9 16:20:28 dorm sshd[22957]: Invalid user alina from 216.196.182.91
+Apr  9 16:20:30 dorm sshd[22959]: Invalid user andrei from 216.196.182.91
+Apr  9 16:20:33 dorm sshd[22961]: Invalid user stef from 216.196.182.91
+Apr  9 16:20:35 dorm sshd[22963]: Invalid user shell from 216.196.182.91
+Apr  9 16:20:37 dorm sshd[22965]: Invalid user print from 216.196.182.91
+Apr  9 16:20:40 dorm sshd[22970]: Invalid user get from 216.196.182.91
+Apr  9 16:20:42 dorm sshd[22976]: Invalid user hk from 216.196.182.91
+Apr  9 16:20:44 dorm sshd[22978]: Invalid user pl from 216.196.182.91
+Apr  9 16:20:46 dorm sshd[22980]: Invalid user Zmeu from 216.196.182.91
+Apr  9 16:20:48 dorm sshd[22982]: Invalid user sef from 216.196.182.91
+Apr  9 16:20:51 dorm sshd[22984]: Invalid user trib from 216.196.182.91
+Apr  9 16:20:53 dorm sshd[22986]: Invalid user haxor from 216.196.182.91
+Apr  9 16:20:55 dorm sshd[22988]: Invalid user hacker from 216.196.182.91
+Apr  9 16:20:57 dorm sshd[22990]: Invalid user max from 216.196.182.91
+Apr  9 16:21:00 dorm sshd[22992]: Invalid user rex from 216.196.182.91
+Apr  9 16:21:02 dorm sshd[22994]: Invalid user stan from 216.196.182.91
+Apr  9 16:21:04 dorm sshd[23003]: Invalid user bran from 216.196.182.91
+Apr  9 16:21:06 dorm sshd[23005]: Invalid user oper from 216.196.182.91
+Apr  9 16:21:09 dorm sshd[23007]: Invalid user cmd from 216.196.182.91
+Apr  9 16:21:11 dorm sshd[23010]: Invalid user id from 216.196.182.91
+Apr  9 16:21:13 dorm sshd[23012]: Invalid user nick from 216.196.182.91
+Apr  9 16:21:15 dorm sshd[23015]: Invalid user radu from 216.196.182.91
+Apr  9 16:21:18 dorm sshd[23017]: Invalid user alin from 216.196.182.91
+Apr  9 16:21:20 dorm sshd[23019]: Invalid user cap from 216.196.182.91
+Apr  9 16:21:22 dorm sshd[23021]: Invalid user sex from 216.196.182.91
+Apr  9 16:21:24 dorm sshd[23023]: Invalid user hy from 216.196.182.91
+Apr  9 16:21:27 dorm sshd[23026]: Invalid user pe from 216.196.182.91
+Apr  9 16:21:29 dorm sshd[23031]: Invalid user ch from 216.196.182.91
+Apr  9 16:21:32 dorm sshd[23033]: Invalid user za from 216.196.182.91
+Apr  9 16:21:34 dorm sshd[23035]: Invalid user com from 216.196.182.91
+Apr  9 16:21:36 dorm sshd[23037]: Invalid user org from 216.196.182.91
+Apr  9 16:21:38 dorm sshd[23039]: Invalid user net from 216.196.182.91
+Apr  9 16:21:41 dorm sshd[23042]: Invalid user internet from 216.196.182.91
+Apr  9 16:21:44 dorm sshd[23044]: Invalid user cafe from 216.196.182.91
+Apr  9 16:21:46 dorm sshd[23046]: Invalid user station from 216.196.182.91
+Apr  9 16:21:48 dorm sshd[23048]: Invalid user play from 216.196.182.91
+Apr  9 16:21:50 dorm sshd[23050]: Invalid user open from 216.196.182.91
+Apr  9 16:21:53 dorm sshd[23052]: Invalid user dulap from 216.196.182.91
+Apr  9 16:21:56 dorm sshd[23055]: Invalid user if from 216.196.182.91
+Apr  9 16:22:01 dorm sshd[23075]: Invalid user uk from 216.196.182.91
+Apr  9 16:22:07 dorm sshd[23077]: Invalid user us from 216.196.182.91
+Apr  9 16:22:10 dorm sshd[23079]: Invalid user alinus from 216.196.182.91
+Apr  9 16:22:16 dorm sshd[23081]: Invalid user rumeno from 216.196.182.91
+Apr  9 16:22:19 dorm sshd[23083]: Invalid user it from 216.196.182.91
+Apr  9 16:22:21 dorm sshd[23086]: Invalid user samba from 216.196.182.91
+Apr  9 16:22:29 dorm sshd[23088]: Invalid user wwwrun from 216.196.182.91
+Apr  9 16:22:32 dorm sshd[23091]: Invalid user ldap from 216.196.182.91
+Apr  9 16:22:34 dorm sshd[23093]: Invalid user squid from 216.196.182.91
+Apr  9 16:22:43 dorm sshd[23097]: Invalid user lp from 216.196.182.91
+Apr  9 16:22:45 dorm sshd[23099]: Invalid user mail from 216.196.182.91
+Apr  9 16:22:47 dorm sshd[23101]: Invalid user yahoo from 216.196.182.91
+Apr  9 16:22:56 dorm sshd[23110]: Invalid user mailman from 216.196.182.91
+Apr  9 16:23:00 dorm sshd[23112]: Invalid user kathi from 216.196.182.91
+Apr  9 16:23:05 dorm sshd[23126]: Invalid user at from 216.196.182.91
+Apr  9 16:23:08 dorm sshd[23129]: Invalid user cgi from 216.196.182.91
+Apr  9 16:23:10 dorm sshd[23132]: Invalid user kayten from 216.196.182.91
+Apr  9 16:23:14 dorm sshd[23134]: Invalid user unseen from 216.196.182.91
+Apr  9 16:23:16 dorm sshd[23137]: Invalid user sabin from 216.196.182.91
+Apr  9 16:23:19 dorm sshd[23139]: Invalid user undernet from 216.196.182.91
+Apr  9 16:23:21 dorm sshd[23141]: Invalid user commando from 216.196.182.91
+Apr  9 17:19:08 dorm sshd[24499]: Accepted keyboard-interactive/pam for c8523016 from 211.23.128.169 port 33010 ssh2
+Apr  9 17:19:53 dorm sshd[24515]: Accepted keyboard-interactive/pam for abaw from 59.124.251.135 port 34841 ssh2
+Apr  9 18:59:37 dorm sshd[27245]: Invalid user b944012012 from 65.49.42.138
+Apr  9 18:59:38 dorm sshd[27245]: error: PAM: authentication error for illegal user b944012012 from 65.49.42.138
+Apr  9 18:59:38 dorm sshd[27245]: Failed keyboard-interactive/pam for invalid user b944012012 from 65.49.42.138 port 65182 ssh2
+Apr  9 18:59:39 dorm sshd[27245]: error: PAM: authentication error for illegal user b944012012 from 65.49.42.138
+Apr  9 18:59:39 dorm sshd[27245]: Failed keyboard-interactive/pam for invalid user b944012012 from 65.49.42.138 port 65182 ssh2
+Apr  9 18:59:40 dorm sshd[27245]: error: PAM: authentication error for illegal user b944012012 from 65.49.42.138
+Apr  9 18:59:40 dorm sshd[27245]: Failed keyboard-interactive/pam for invalid user b944012012 from 65.49.42.138 port 65182 ssh2
+Apr  9 20:28:35 dorm sshd[13206]: syslogin_perform_logout: logout() returned an error
+Apr  9 21:36:50 dorm sshd[31403]: Accepted keyboard-interactive/pam for tjs from 140.117.205.245 port 63252 ssh2
+Apr  9 21:36:53 dorm sshd[31406]: Received disconnect from 140.117.205.245: 11: disconnected by user
+Apr  9 21:48:35 dorm sshd[31725]: Accepted keyboard-interactive/pam for c8523016 from 175.181.146.53 port 3042 ssh2
+Apr  9 21:50:42 dorm sshd[31786]: Accepted keyboard-interactive/pam for ericj from 182.235.176.15 port 3542 ssh2
+Apr  9 21:58:16 dorm sshd[31789]: error: connect_to rw.iask.com port 80: failed.
+Apr  9 22:46:14 dorm sshd[33249]: error: ssh_msg_send: write
+Apr 10 02:14:51 dorm sshd[38711]: Did not receive identification string from 184.82.245.78
+Apr 10 03:53:38 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:53:41 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:53:43 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:53:46 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:53:48 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:53:51 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:53:53 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:53:56 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:53:58 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:01 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:03 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:06 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:09 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:11 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:14 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:16 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:19 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:21 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:24 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:26 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:29 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:31 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:34 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:37 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:39 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:42 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:44 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:47 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:49 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:52 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:54 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:57 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:54:59 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:02 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:05 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:07 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:10 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:12 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:15 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:17 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:20 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:22 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:25 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:27 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:30 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:32 dorm saslauthd[642]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:35 dorm saslauthd[644]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:38 dorm saslauthd[625]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:40 dorm saslauthd[643]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 03:55:43 dorm saslauthd[641]: do_auth         : auth failure: [user=pigfoot] [service=smtp] [realm=CDPA.nsysu.edu.tw] [mech=pam] [reason=PAM auth error]
+Apr 10 05:17:56 dorm saslauthd[642]: do_request      : NULL password received
+Apr 10 05:17:57 dorm saslauthd[644]: do_request      : NULL password received
+Apr 10 05:17:58 dorm saslauthd[625]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:17:58 dorm saslauthd[643]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:17:59 dorm saslauthd[641]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:00 dorm saslauthd[642]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:01 dorm saslauthd[644]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:02 dorm saslauthd[625]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:03 dorm saslauthd[643]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:03 dorm saslauthd[641]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:06 dorm saslauthd[642]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:10 dorm saslauthd[644]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:14 dorm saslauthd[625]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:18 dorm saslauthd[643]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:22 dorm saslauthd[641]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:25 dorm saslauthd[642]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:29 dorm saslauthd[644]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:33 dorm saslauthd[625]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:37 dorm saslauthd[643]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 05:18:41 dorm saslauthd[641]: do_auth         : auth failure: [user=anonymous] [service=smtp] [realm=] [mech=pam] [reason=PAM auth error]
+Apr 10 09:29:00 dorm sshd[51807]: error: PAM: authentication error for minyen from 61.64.143.131
+Apr 10 09:29:03 dorm sshd[51807]: Accepted keyboard-interactive/pam for minyen from 61.64.143.131 port 1391 ssh2
+Apr 10 10:49:20 dorm sshd[53985]: Accepted keyboard-interactive/pam for tjs from 140.117.205.245 port 46612 ssh2
+Apr 10 10:49:23 dorm sshd[53988]: Received disconnect from 140.117.205.245: 11: disconnected by user
+Apr 10 12:43:39 dorm sshd[57117]: Accepted keyboard-interactive/pam for c8523016 from 211.23.128.169 port 34264 ssh2
+Apr 10 13:45:44 dorm sshd[21871]: Received disconnect from 140.115.152.38: 11: disconnected by user
+Apr 10 15:40:53 dorm sshd[61871]: Invalid user fluffy from 173.192.142.34
+Apr 10 15:40:55 dorm sshd[61873]: Invalid user admin from 173.192.142.34
+Apr 10 15:42:08 dorm sshd[61875]: Did not receive identification string from 173.192.142.34
+Apr 10 15:46:03 dorm sshd[62047]: Accepted publickey for b923012012 from 140.115.152.38 port 42344 ssh2
+Apr 10 16:01:20 dorm sshd[42904]: syslogin_perform_logout: logout() returned an error
+Apr 10 16:01:33 dorm sshd[62049]: error: connect_to pptp.raptorvpn.com port 80: failed.
+Apr 10 16:01:39 dorm sshd[62049]: error: connect_to pptp.raptorvpn.com port 80: failed.
+Apr 10 19:41:45 dorm sshd[51807]: syslogin_perform_logout: logout() returned an error
+Apr 10 20:09:05 dorm sshd[69136]: Invalid user oracle from 186.42.163.18
+Apr 10 20:09:08 dorm sshd[69138]: Invalid user test from 186.42.163.18
+Apr 10 20:48:56 dorm sshd[70143]: Did not receive identification string from 93.211.156.208
+Apr 11 08:08:17 dorm sshd[93829]: Accepted keyboard-interactive/pam for c8523016 from 175.180.109.129 port 1205 ssh2
+Apr 11 09:31:00 dorm sshd[95977]: Accepted keyboard-interactive/pam for executor from 140.117.241.170 port 48962 ssh2
+Apr 11 09:31:37 dorm su: BAD SU executor to root on /dev/ttyp3
+Apr 11 09:31:41 dorm su: executor to root on /dev/ttyp3
+Apr 11 09:33:54 dorm sshd[95983]: Received disconnect from 140.117.241.170: 11: disconnected by user
+Apr 11 09:34:12 dorm sshd[96106]: Accepted keyboard-interactive/pam for executor from 140.117.241.170 port 34065 ssh2
+Apr 11 09:34:20 dorm sshd[96109]: Received disconnect from 140.117.241.170: 11: disconnected by user
+Apr 11 09:34:30 dorm sshd[96114]: error: PAM: authentication error for executor from 140.117.241.170
+Apr 11 09:34:36 dorm sshd[96114]: Accepted keyboard-interactive/pam for executor from 140.117.241.170 port 34066 ssh2
+Apr 11 09:35:20 dorm su: executor to root on /dev/ttyp3
+Apr 11 09:55:59 dorm sshd[96726]: Accepted keyboard-interactive/pam for minyen from 61.64.143.131 port 2005 ssh2
+Apr 11 11:02:41 dorm sshd[98369]: Accepted keyboard-interactive/pam for c8523016 from 211.23.128.169 port 34863 ssh2
+Apr 11 15:07:47 dorm sshd[5125]: Accepted keyboard-interactive/pam for c8523016 from 211.23.128.169 port 33309 ssh2
+Apr 11 15:31:07 dorm sshd[96118]: Received disconnect from 140.117.241.170: 11: disconnected by user
+Apr 11 15:33:40 dorm sshd[5841]: Accepted keyboard-interactive/pam for executor from 140.117.241.170 port 60509 ssh2
+Apr 11 15:33:43 dorm su: executor to root on /dev/ttyp3

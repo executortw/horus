@@ -1,0 +1,114 @@
+Apr 10 20:00:00 Earth newsyslog[94278]: logfile turned over due to size>100K
+Apr 10 20:05:00 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 20:07:02 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 20:09:03 Earth sshd[94350]: Invalid user oracle from 186.42.163.18
+Apr 10 20:09:06 Earth sshd[94352]: Invalid user test from 186.42.163.18
+Apr 10 20:16:03 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 20:25:44 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 20:29:02 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 20:48:56 Earth sshd[94501]: Did not receive identification string from 93.211.156.208
+Apr 10 20:54:45 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 20:55:03 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 20:58:28 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 21:00:55 Earth sshd[93917]: session_input_channel_req: no session 6 req winadj@putty.projects.tartarus.org
+Apr 10 21:01:01 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 21:01:36 Earth last message repeated 3 times
+Apr 10 21:03:14 Earth last message repeated 5 times
+Apr 10 21:13:00 Earth last message repeated 13 times
+Apr 10 21:16:28 Earth sshd[93917]: session_input_channel_req: no session 3 req winadj@putty.projects.tartarus.org
+Apr 10 21:21:57 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:23:32 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:25:18 Earth last message repeated 5 times
+Apr 10 21:28:57 Earth last message repeated 4 times
+Apr 10 21:29:34 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 21:30:37 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:31:55 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:32:06 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:32:07 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 21:32:07 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 21:32:23 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:32:54 Earth last message repeated 2 times
+Apr 10 21:33:41 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:34:23 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 21:34:33 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:36:07 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 21:42:10 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 21:45:42 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 21:45:54 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 21:47:30 Earth last message repeated 2 times
+Apr 10 21:49:26 Earth sshd[93917]: session_input_channel_req: no session 3 req winadj@putty.projects.tartarus.org
+Apr 10 21:49:47 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 21:50:33 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 21:52:10 Earth last message repeated 2 times
+Apr 10 21:54:23 Earth last message repeated 2 times
+Apr 10 21:56:08 Earth sshd[93917]: session_input_channel_req: no session 3 req winadj@putty.projects.tartarus.org
+Apr 10 21:58:52 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 22:00:27 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 22:00:56 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 22:01:24 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 22:01:36 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 22:01:36 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 22:03:30 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 22:05:32 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 22:08:05 Earth sshd[93917]: session_input_channel_req: no session 7 req winadj@putty.projects.tartarus.org
+Apr 10 22:14:06 Earth last message repeated 7 times
+Apr 10 22:18:34 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 22:22:36 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:23:02 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:23:16 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:24:11 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 22:25:33 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:25:59 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:27:24 Earth last message repeated 5 times
+Apr 10 22:31:37 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 22:31:46 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:32:22 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:33:11 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 22:33:13 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:34:26 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 22:36:23 Earth last message repeated 3 times
+Apr 10 22:44:21 Earth last message repeated 5 times
+Apr 10 22:44:40 Earth sshd[93917]: session_input_channel_req: no session 2 req winadj@putty.projects.tartarus.org
+Apr 10 22:47:30 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 22:47:50 Earth sshd[93917]: session_input_channel_req: no session 4 req winadj@putty.projects.tartarus.org
+Apr 10 23:01:15 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 23:01:38 Earth last message repeated 2 times
+Apr 10 23:02:13 Earth sshd[93917]: session_input_channel_req: no session 6 req winadj@putty.projects.tartarus.org
+Apr 10 23:03:09 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 23:03:56 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 23:09:44 Earth sshd[93917]: session_input_channel_req: no session 5 req winadj@putty.projects.tartarus.org
+Apr 10 23:11:03 Earth sshd[93917]: session_input_channel_req: no session 44 req winadj@putty.projects.tartarus.org
+Apr 10 23:15:17 Earth sshd[93917]: session_input_channel_req: no session 1 req winadj@putty.projects.tartarus.org
+Apr 10 23:33:15 Earth sshd[95130]: reverse mapping checking getaddrinfo for 175-182-51-108.adsl.dynamic.seed.net.tw [175.182.51.108] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 10 23:33:15 Earth sshd[95130]: Invalid user  from 175.182.51.108
+Apr 10 23:33:16 Earth sshd[95130]: error: PAM: authentication error for illegal user  from 175.182.51.108
+Apr 10 23:33:16 Earth sshd[95130]: Failed keyboard-interactive/pam for invalid user  from 175.182.51.108 port 3568 ssh2
+Apr 10 23:33:16 Earth sshd[95130]: error: PAM: authentication error for illegal user  from 175.182.51.108
+Apr 10 23:33:16 Earth sshd[95130]: Failed keyboard-interactive/pam for invalid user  from 175.182.51.108 port 3568 ssh2
+Apr 10 23:33:16 Earth sshd[95130]: error: PAM: authentication error for illegal user  from 175.182.51.108
+Apr 10 23:33:16 Earth sshd[95130]: Failed keyboard-interactive/pam for invalid user  from 175.182.51.108 port 3568 ssh2
+Apr 10 23:33:16 Earth sshd[95130]: error: PAM: authentication error for illegal user  from 175.182.51.108
+Apr 10 23:33:16 Earth sshd[95130]: Failed keyboard-interactive/pam for invalid user  from 175.182.51.108 port 3568 ssh2
+Apr 10 23:33:16 Earth sshd[95130]: error: PAM: authentication error for illegal user  from 175.182.51.108
+Apr 10 23:33:16 Earth sshd[95130]: Failed keyboard-interactive/pam for invalid user  from 175.182.51.108 port 3568 ssh2
+Apr 10 23:33:16 Earth sshd[95130]: error: PAM: authentication error for illegal user  from 175.182.51.108
+Apr 10 23:33:16 Earth sshd[95130]: Failed keyboard-interactive/pam for invalid user  from 175.182.51.108 port 3568 ssh2
+Apr 10 23:33:16 Earth sshd[95130]: error: PAM: authentication error for illegal user  from 175.182.51.108
+Apr 10 23:33:16 Earth sshd[95130]: Failed keyboard-interactive/pam for invalid user  from 175.182.51.108 port 3568 ssh2
+Apr 11 09:05:12 Earth sshd[5499]: error: PAM: authentication error for executor from 140.117.241.170
+Apr 11 09:05:21 Earth last message repeated 2 times
+Apr 11 09:05:35 Earth sshd[5504]: Accepted keyboard-interactive/pam for executor from 140.117.241.170 port 59000 ssh2
+Apr 11 09:05:42 Earth su: executor to root on /dev/ttypb
+Apr 11 09:22:13 Earth su: executor to root on /dev/ttypb
+Apr 11 09:23:31 Earth su: executor to root on /dev/ttypb
+Apr 11 09:25:53 Earth sshd[5507]: Received disconnect from 140.117.241.170: 11: disconnected by user
+Apr 11 09:26:06 Earth sshd[5691]: Accepted keyboard-interactive/pam for executor from 140.117.241.170 port 50723 ssh2
+Apr 11 09:26:09 Earth su: executor to root on /dev/ttypb
+Apr 11 09:27:13 Earth sshd[5694]: Received disconnect from 140.117.241.170: 11: disconnected by user
+Apr 11 09:27:18 Earth sshd[5711]: Accepted keyboard-interactive/pam for executor from 140.117.241.170 port 37691 ssh2
+Apr 11 09:27:21 Earth su: executor to root on /dev/ttypb
+Apr 11 09:30:44 Earth sshd[5714]: Received disconnect from 140.117.241.170: 11: disconnected by user
+Apr 11 15:31:14 Earth sshd[7193]: Accepted keyboard-interactive/pam for executor from 140.117.241.170 port 39374 ssh2
+Apr 11 15:31:34 Earth su: BAD SU executor to root on /dev/ttypb
+Apr 11 15:31:47 Earth last message repeated 4 times
+Apr 11 15:31:53 Earth su: executor to root on /dev/ttypb

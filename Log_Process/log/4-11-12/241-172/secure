@@ -1,0 +1,82 @@
+Apr  8 10:55:06 scout unix_chkpwd[9483]: password check failed for user (bin)
+Apr  8 10:55:06 scout sshd[9481]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=59.60.7.111  user=bin
+Apr  8 10:55:09 scout sshd[9481]: Failed password for bin from 59.60.7.111 port 40213 ssh2
+Apr  8 10:55:09 scout sshd[9482]: Received disconnect from 59.60.7.111: 11: Bye Bye
+Apr  8 10:55:19 scout unix_chkpwd[9488]: password check failed for user (bin)
+Apr  8 10:55:19 scout sshd[9485]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=59.60.7.111  user=bin
+Apr  8 10:55:20 scout sshd[9485]: Failed password for bin from 59.60.7.111 port 41325 ssh2
+Apr  8 10:55:20 scout sshd[9486]: Connection closed by 59.60.7.111
+Apr  8 14:50:41 scout unix_chkpwd[9597]: password check failed for user (root)
+Apr  8 14:50:41 scout sshd[9594]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=140.99.16.138  user=root
+Apr  8 14:50:42 scout sshd[9594]: Failed password for root from 140.99.16.138 port 60430 ssh2
+Apr  8 14:50:42 scout sshd[9595]: Connection closed by 140.99.16.138
+Apr  8 15:14:07 scout unix_chkpwd[9626]: password check failed for user (bin)
+Apr  8 15:14:07 scout sshd[9624]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=59.60.7.111  user=bin
+Apr  8 15:14:09 scout sshd[9624]: Failed password for bin from 59.60.7.111 port 51639 ssh2
+Apr  8 15:14:09 scout sshd[9625]: Received disconnect from 59.60.7.111: 11: Bye Bye
+Apr  9 02:28:01 scout sshd[9924]: Did not receive identification string from 125.88.112.42
+Apr  9 07:50:14 scout unix_chkpwd[10149]: password check failed for user (root)
+Apr  9 07:50:14 scout sshd[10147]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=218.108.224.81  user=root
+Apr  9 07:50:16 scout sshd[10147]: Failed password for root from 218.108.224.81 port 36479 ssh2
+Apr  9 07:50:16 scout sshd[10148]: Received disconnect from 218.108.224.81: 11: Bye Bye
+Apr  9 07:50:28 scout unix_chkpwd[10154]: password check failed for user (root)
+Apr  9 07:50:28 scout sshd[10152]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=218.108.224.81  user=root
+Apr  9 07:50:29 scout sshd[10152]: Failed password for root from 218.108.224.81 port 37634 ssh2
+Apr  9 07:50:29 scout sshd[10153]: Connection closed by 218.108.224.81
+Apr  9 09:40:32 scout sshd[10207]: Did not receive identification string from 173.192.142.34
+Apr  9 14:24:55 scout sshd[10340]: Did not receive identification string from 216.196.182.91
+Apr  9 16:23:32 scout sshd[10397]: Did not receive identification string from 216.196.182.91
+Apr  9 16:25:39 scout sshd[10400]: Invalid user network from 216.196.182.91
+Apr  9 16:25:39 scout sshd[10401]: input_userauth_request: invalid user network
+Apr  9 16:25:39 scout sshd[10400]: pam_unix(sshd:auth): check pass; user unknown
+Apr  9 16:25:39 scout sshd[10400]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=fuse-dedicated-216-196-182-91.fuse.net 
+Apr  9 16:25:39 scout sshd[10400]: pam_succeed_if(sshd:auth): error retrieving information about user network
+Apr  9 16:26:01 scout sshd[10400]: Failed password for invalid user network from 216.196.182.91 port 53852 ssh2
+Apr  9 16:26:01 scout sshd[10401]: Connection closed by 216.196.182.91
+Apr  9 20:40:20 scout sshd[10507]: reverse mapping checking getaddrinfo for static-216-214-21-254.isp.broadviewnet.net [216.214.21.254] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr  9 20:40:21 scout unix_chkpwd[10510]: password check failed for user (root)
+Apr  9 20:40:21 scout sshd[10507]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=216.214.21.254  user=root
+Apr  9 20:40:22 scout sshd[10507]: Failed password for root from 216.214.21.254 port 48436 ssh2
+Apr  9 20:40:23 scout sshd[10508]: Received disconnect from 216.214.21.254: 11: Bye Bye
+Apr  9 20:40:34 scout unix_chkpwd[10514]: password check failed for user (root)
+Apr  9 20:40:34 scout sshd[10511]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=216.214.21.254  user=root
+Apr  9 20:40:36 scout sshd[10511]: Failed password for root from 216.214.21.254 port 48646 ssh2
+Apr  9 20:40:36 scout sshd[10512]: Connection closed by 216.214.21.254
+Apr 10 02:18:21 scout sshd[10680]: Did not receive identification string from 184.82.245.78
+Apr 10 15:45:48 scout sshd[11111]: reverse mapping checking getaddrinfo for 141-138-140-247.colo.transip.net [141.138.140.247] failed - POSSIBLE BREAK-IN ATTEMPT!
+Apr 10 15:45:48 scout unix_chkpwd[11115]: password check failed for user (root)
+Apr 10 15:45:48 scout sshd[11111]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=141.138.140.247  user=root
+Apr 10 15:45:49 scout sshd[11111]: Failed password for root from 141.138.140.247 port 60985 ssh2
+Apr 10 15:45:50 scout sshd[11112]: Connection closed by 141.138.140.247
+Apr 10 20:11:32 scout unix_chkpwd[11251]: password check failed for user (root)
+Apr 10 20:11:32 scout sshd[11248]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=186.42.163.18  user=root
+Apr 10 20:11:34 scout sshd[11248]: Failed password for root from 186.42.163.18 port 38666 ssh2
+Apr 10 20:11:34 scout sshd[11250]: Received disconnect from 186.42.163.18: 11: Bye Bye
+Apr 10 20:11:36 scout unix_chkpwd[11255]: password check failed for user (root)
+Apr 10 20:11:36 scout sshd[11253]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=186.42.163.18  user=root
+Apr 10 20:11:38 scout sshd[11253]: Failed password for root from 186.42.163.18 port 39016 ssh2
+Apr 10 20:11:38 scout sshd[11254]: Received disconnect from 186.42.163.18: 11: Bye Bye
+Apr 10 20:11:40 scout unix_chkpwd[11258]: password check failed for user (root)
+Apr 10 20:11:40 scout sshd[11256]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=186.42.163.18  user=root
+Apr 10 20:11:43 scout sshd[11256]: Failed password for root from 186.42.163.18 port 39282 ssh2
+Apr 10 20:11:43 scout sshd[11257]: Received disconnect from 186.42.163.18: 11: Bye Bye
+Apr 10 20:11:46 scout unix_chkpwd[11261]: password check failed for user (root)
+Apr 10 20:11:46 scout sshd[11259]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=186.42.163.18  user=root
+Apr 10 20:11:48 scout sshd[11259]: Failed password for root from 186.42.163.18 port 39679 ssh2
+Apr 10 20:11:48 scout sshd[11260]: Received disconnect from 186.42.163.18: 11: Bye Bye
+Apr 10 20:12:01 scout unix_chkpwd[11264]: password check failed for user (root)
+Apr 10 20:12:01 scout sshd[11262]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=186.42.163.18  user=root
+Apr 10 20:12:02 scout sshd[11262]: Failed password for root from 186.42.163.18 port 40019 ssh2
+Apr 10 20:12:02 scout sshd[11263]: Connection closed by 186.42.163.18
+Apr 10 20:52:33 scout sshd[11265]: Did not receive identification string from 93.211.156.208
+Apr 11 12:59:45 scout unix_chkpwd[11811]: password check failed for user (scout)
+Apr 11 12:59:45 scout gnome-screensaver-dialog: pam_unix(gnome-screensaver:auth): authentication failure; logname= uid=500 euid=500 tty=:0.0 ruser= rhost=  user=scout
+Apr 11 12:59:45 scout gnome-screensaver-dialog: gkr-pam: the password for the login keyring was invalid.
+Apr 11 12:59:51 scout unix_chkpwd[11815]: password check failed for user (scout)
+Apr 11 12:59:51 scout gnome-screensaver-dialog: pam_unix(gnome-screensaver:auth): authentication failure; logname= uid=500 euid=500 tty=:0.0 ruser= rhost=  user=scout
+Apr 11 12:59:51 scout gnome-screensaver-dialog: gkr-pam: the password for the login keyring was invalid.
+Apr 11 13:05:36 scout su: pam_unix(su:session): session closed for user root
+Apr 11 13:06:06 scout su: pam_unix(su:session): session opened for user root by scout(uid=500)
+Apr 11 15:43:19 scout unix_chkpwd[11946]: password check failed for user (scout)
+Apr 11 15:43:19 scout gnome-screensaver-dialog: pam_unix(gnome-screensaver:auth): authentication failure; logname= uid=500 euid=500 tty=:0.0 ruser= rhost=  user=scout
+Apr 11 15:43:19 scout gnome-screensaver-dialog: gkr-pam: the password for the login keyring was invalid.

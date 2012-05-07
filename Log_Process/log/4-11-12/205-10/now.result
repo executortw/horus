@@ -1,0 +1,19 @@
+
+
+Result record_try_failed matrix:
+Foreign Address
+186.42.163.18
+93.211.156.208
+175.182.51.108
+140.117.241.170
+count
+2
+1
+16
+4
+('count', 2, 1, 16, 4)
+
+
+Result record_account_accepted matrix:
+['Account', ['IP', 'Time'], ['IP', 'Time'], 'count']
+['executor', ['140.117.241.170', 'Apr 11 09:05:35'], ['140.117.241.170', 'Apr 11 09:26:06'], ['140.117.241.170', 'Apr 11 09:27:18'], ['140.117.241.170', 'Apr 11 15:31:14']]

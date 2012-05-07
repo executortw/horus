@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!--                                                            -->
+<!-- pylogparser - Logs parsers python library                  -->
+<!-- Copyright (C) 2011 Wallix Inc.                             -->
+<!--                                                            -->
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!--                                                            -->
+<!-- This package is free software; you can redistribute        -->
+<!-- it and/or modify it under the terms of the GNU Lesser      -->
+<!-- General Public License as published by the Free Software   -->
+<!-- Foundation; either version 2.1 of the License, or (at      -->
+<!-- your option) any later version.                            -->
+<!--                                                            -->
+<!-- This package is distributed in the hope that it will be    -->
+<!-- useful, but WITHOUT ANY WARRANTY; without even the implied -->
+<!-- warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR    -->
+<!-- PURPOSE.  See the GNU Lesser General Public License for    -->
+<!-- more details.                                              -->
+<!--                                                            -->
+<!-- You should have received a copy of the GNU Lesser General  -->
+<!-- Public License along with this package; if not, write      -->
+<!-- to the Free Software Foundation, Inc., 59 Temple Place,    -->
+<!-- Suite 330, Boston, MA  02111-1307  USA                     -->
+<!--                                                            -->
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!DOCTYPE normalizer SYSTEM "normalizer.dtd">
+<normalizer name="sshd"
+            version="0.99"
+            unicode="yes"
+            ignorecase="yes"
+            matchtype="match"
+            appliedTo="body"
+            taxonomy="access control">
+    <description><localized_desc language="en">This normalizer can parse connection messages logged by a SSH server.</localized_desc>
+        <localized_desc language="fr">Ce normaliseur analyse les événements de connexion à un serveur SSH.</localized_desc></description>
+    <authors>
+        <author>mhu@wallix.com</author>
+    </authors>
+    <tagTypes>
+        <tagType name="ActionTag" type="basestring">
+            <description>
+        <localized_desc language="en">matches the action logged for a connection</localized_desc>
+        <localized_desc language="fr">correspond à l'action de connexion</localized_desc></description>
+            <regexp>Failed|Accepted</regexp>
+        </tagType>
+    </tagTypes>
+    <callbacks>
+        <callback name="decode_action">
+if (value == "Failed") or (value == "Invalid") or (value == "authentication") or (value =="Authentication"):
+    log['action'] = 'fail'
+elif value == "Accepted" :
+    log['action'] = 'accept'
+else:
+    log['action'] = 'look'</callback>
+    </callbacks>
+    <patterns>
+
+        <pattern name="sshd-000">
+            <description>
+        <localized_desc language="en">A generic sshd log line.</localized_desc>
+        <localized_desc language="fr">Une notification standard de connexion à un serveur SSH.</localized_desc></description>
+            <text>error: PAM: AUTH METHOD for(?: illegal user)? USER from SHOST</text>
+            <tags>
+                <tag name="authentication" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the outcome of the connection attempt</localized_desc>
+        <localized_desc language="fr">le résultat de la tentative de connexion</localized_desc></description>
+                 <substitute>AUTH</substitute>
+                 <callbacks>
+                  <callback>decode_action</callback>
+                 </callbacks>
+                </tag>
+                <tag name="method" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the connection method (password or key)</localized_desc>
+        <localized_desc language="fr">la méthode de connexion utilisée (mot de passe ou clé asymétrique)</localized_desc></description>
+                 <substitute>METHOD</substitute>
+                </tag>
+                <tag name="user" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the user requesting the connection</localized_desc>
+        <localized_desc language="fr">l'utilisateur à l'origine de la connexion</localized_desc></description>
+                 <substitute>USER</substitute>
+                </tag>
+                <tag name="source_host" tagType="HOST">
+                 <description>
+        <localized_desc language="en">the inbound connection's IP address</localized_desc>
+        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
+                 <substitute>SHOST</substitute>
+                </tag>
+            </tags>
+            <examples>
+                <example>
+                     <text>error: PAM: Authentication failure for root from 41-133-228-199.dsl.mweb.co.za</text>
+                     <expectedTags>
+                          <expectedTag name="action">fail</expectedTag>
+                          <expectedTag name="method">failure</expectedTag>
+                          <expectedTag name="user">root</expectedTag>
+                          <expectedTag name="source_host">41-133-228-199.dsl.mweb.co.za</expectedTag>
+                          <expectedTag name="taxonomy">access control</expectedTag>
+                     </expectedTags>
+                </example>
+            </examples>
+        </pattern>
+
+        <pattern name="sshd-bsd">
+            <description>
+        <localized_desc language="en">FreeBSD log file.</localized_desc></description>
+            <text>INVALID user USER from IP</text>
+            <tags>
+                <tag name="invalid" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the outcome of the connection attempt</localized_desc>
+        <localized_desc language="fr">le résultat de la tentative de connexion</localized_desc></description>
+                 <substitute>INVALID</substitute>
+                 <callbacks>
+                  <callback>decode_action</callback>
+                 </callbacks>
+                </tag>
+
+                <tag name="user" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the user requesting the connection</localized_desc>
+        <localized_desc language="fr">l'utilisateur à l'origine de la connexion</localized_desc></description>
+                 <substitute>USER</substitute>
+                </tag>
+                <tag name="source_ip" tagType="IP">
+                 <description>
+        <localized_desc language="en">the inbound connection's IP address</localized_desc>
+        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
+                 <substitute>IP</substitute>
+                </tag>
+            </tags>
+            <examples>
+                <example>
+                     <text>Invalid user admin from 218.49.183.17</text>
+                     <expectedTags>
+                          <expectedTag name="action">fail</expectedTag>
+                          <expectedTag name="user">admin</expectedTag>
+                          <expectedTag name="source_ip">218.49.183.17</expectedTag>
+                          <expectedTag name="taxonomy">access control</expectedTag>
+                     </expectedTags>
+                </example>
+            </examples>
+        </pattern>
+
+
+        <pattern name="sshd-001">
+            <description>
+        <localized_desc language="en">A generic sshd log line.</localized_desc>
+        <localized_desc language="fr">Une notification standard de connexion à un serveur SSH.</localized_desc></description>
+            <text>LOGDATE LIP sshd\[[0-9]+\]\: ACTION METHOD for(?: invalid user)? USER from SIP port [0-9]+ ssh[0-9]</text>
+            <tags>
+
+                <tag name="syslogDate" tagType="syslogDate">
+                 <description>
+        <localized_desc language="en">the inbound connection's IP address</localized_desc>
+        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
+                 <substitute>LOGDATE</substitute>
+                </tag>
+                <tag name="local_ip" tagType="IP">
+                 <description>
+        <localized_desc language="en">the inbound connection's IP address</localized_desc>
+        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
+                 <substitute>LIP</substitute>
+				</tag>
+                <tag name="__action" tagType="ActionTag">
+                 <description>
+        <localized_desc language="en">the outcome of the connection attempt</localized_desc>
+        <localized_desc language="fr">le résultat de la tentative de connexion</localized_desc></description>
+                 <substitute>ACTION</substitute>
+                 <callbacks>
+                  <callback>decode_action</callback>
+                 </callbacks>
+                </tag>
+                <tag name="method" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the connection method (password or key)</localized_desc>
+        <localized_desc language="fr">la méthode de connexion utilisée (mot de passe ou clé asymétrique)</localized_desc></description>
+                 <substitute>METHOD</substitute>
+                </tag>
+                <tag name="user" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the user requesting the connection</localized_desc>
+        <localized_desc language="fr">l'utilisateur à l'origine de la connexion</localized_desc></description>
+                 <substitute>USER</substitute>
+                </tag>
+                <tag name="source_ip" tagType="IP">
+                 <description>
+        <localized_desc language="en">the inbound connection's IP address</localized_desc>
+        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
+                 <substitute>SIP</substitute>
+                </tag>
+            </tags>
+            <examples>
+                <example>
+                     <text>Apr 13 15:16:35 140.117.241.171 sshd[18396]: Failed password for admin from 218.49.183.17 port 49468 ssh2</text>
+                     <expectedTags>
+                          <expectedTag name="syslogDate">Apr 13 15:16:35</expectedTag>
+                          <expectedTag name="local_ip">140.117.241.171</expectedTag>
+                          <expectedTag name="action">fail</expectedTag>
+                          <expectedTag name="method">password</expectedTag>
+                          <expectedTag name="user">admin</expectedTag>
+                          <expectedTag name="source_ip">218.49.183.17</expectedTag>
+                          <expectedTag name="taxonomy">access control</expectedTag>
+                     </expectedTags>
+                </example>
+            </examples>
+        </pattern>
+
+        <pattern name="sshd-002">
+            <description>
+        <localized_desc language="en">A generic sshd log line.</localized_desc>
+        <localized_desc language="fr">Une notification standard de connexion à un serveur SSH.</localized_desc></description>
+            <text>error: PAM: AUTH METHOD for(?: illegal user)? USER from IP</text>
+            <tags>
+                <tag name="authentication" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the outcome of the connection attempt</localized_desc>
+        <localized_desc language="fr">le résultat de la tentative de connexion</localized_desc></description>
+                 <substitute>AUTH</substitute>
+                 <callbacks>
+                  <callback>decode_action</callback>
+                 </callbacks>
+                </tag>
+                <tag name="method" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the connection method (password or key)</localized_desc>
+        <localized_desc language="fr">la méthode de connexion utilisée (mot de passe ou clé asymétrique)</localized_desc></description>
+                 <substitute>METHOD</substitute>
+                </tag>
+                <tag name="user" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the user requesting the connection</localized_desc>
+        <localized_desc language="fr">l'utilisateur à l'origine de la connexion</localized_desc></description>
+                 <substitute>USER</substitute>
+                </tag>
+                <tag name="source_ip" tagType="IP">
+                 <description>
+        <localized_desc language="en">the inbound connection's IP address</localized_desc>
+        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
+                 <substitute>IP</substitute>
+                </tag>
+            </tags>
+            <examples>
+                <example>
+                     <text>error: PAM: authentication error for illegal user unioly from 211.23.128.169</text>
+                     <expectedTags>
+                          <expectedTag name="action">fail</expectedTag>
+                          <expectedTag name="method">error</expectedTag>
+                          <expectedTag name="user">unioly</expectedTag>
+                          <expectedTag name="source_ip">211.23.128.169</expectedTag>
+                          <expectedTag name="taxonomy">access control</expectedTag>
+                     </expectedTags>
+                </example>
+            </examples>
+        </pattern>
+
+    </patterns>
+</normalizer>
+
