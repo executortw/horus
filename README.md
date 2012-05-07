@@ -1,4 +1,4 @@
 horus
 =====
 
-An netflow &amp; syslog correlation detection architecture.
+An netflow & syslog correlation detection architecture.
