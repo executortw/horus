@@ -44,6 +44,21 @@
         <localized_desc language="fr">correspond à l'action de connexion</localized_desc></description>
             <regexp>Failed|Accepted</regexp>
         </tagType>
+        <tagType name="syslogSource" type="basestring">
+            <description>
+        <localized_desc language="en">Expression matching the log's source.</localized_desc>
+        <localized_desc language="fr">Expression correspondant ? la source du message.</localized_desc>
+            </description>
+            <regexp>[^: ]+</regexp>
+        </tagType>
+        <tagType name="syslogProgram" type="basestring">
+            <description>
+        <localized_desc language="en">Expression matching the log's program.</localized_desc>
+        <localized_desc language="fr">Expression correspondant au programme notifiant l'?v?nement.</localized_desc>
+            </description>
+            <regexp>[^: []*</regexp>
+        </tagType>
+
     </tagTypes>
     <callbacks>
         <callback name="decode_action">
@@ -53,62 +68,25 @@ elif value == "Accepted" :
     log['action'] = 'accept'
 else:
     log['action'] = 'look'</callback>
+
     </callbacks>
+
     <patterns>
-
-        <pattern name="sshd-000">
-            <description>
-        <localized_desc language="en">A generic sshd log line.</localized_desc>
-        <localized_desc language="fr">Une notification standard de connexion à un serveur SSH.</localized_desc></description>
-            <text>error: PAM: AUTH METHOD for(?: illegal user)? USER from SHOST</text>
-            <tags>
-                <tag name="authentication" tagType="Anything">
-                 <description>
-        <localized_desc language="en">the outcome of the connection attempt</localized_desc>
-        <localized_desc language="fr">le résultat de la tentative de connexion</localized_desc></description>
-                 <substitute>AUTH</substitute>
-                 <callbacks>
-                  <callback>decode_action</callback>
-                 </callbacks>
-                </tag>
-                <tag name="method" tagType="Anything">
-                 <description>
-        <localized_desc language="en">the connection method (password or key)</localized_desc>
-        <localized_desc language="fr">la méthode de connexion utilisée (mot de passe ou clé asymétrique)</localized_desc></description>
-                 <substitute>METHOD</substitute>
-                </tag>
-                <tag name="user" tagType="Anything">
-                 <description>
-        <localized_desc language="en">the user requesting the connection</localized_desc>
-        <localized_desc language="fr">l'utilisateur à l'origine de la connexion</localized_desc></description>
-                 <substitute>USER</substitute>
-                </tag>
-                <tag name="source_host" tagType="HOST">
-                 <description>
-        <localized_desc language="en">the inbound connection's IP address</localized_desc>
-        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
-                 <substitute>SHOST</substitute>
-                </tag>
-            </tags>
-            <examples>
-                <example>
-                     <text>error: PAM: Authentication failure for root from 41-133-228-199.dsl.mweb.co.za</text>
-                     <expectedTags>
-                          <expectedTag name="action">fail</expectedTag>
-                          <expectedTag name="method">failure</expectedTag>
-                          <expectedTag name="user">root</expectedTag>
-                          <expectedTag name="source_host">41-133-228-199.dsl.mweb.co.za</expectedTag>
-                          <expectedTag name="taxonomy">access control</expectedTag>
-                     </expectedTags>
-                </example>
-            </examples>
-        </pattern>
-
-        <pattern name="sshd-bsd">
+        <pattern name="sshd-001">
             <description>
         <localized_desc language="en">FreeBSD log file.</localized_desc></description>
-            <text>INVALID user USER from IP</text>
+            <text>DATE LOCAL sshd\[[0-9]+\]: INVALID user USER from SIP</text>
             <tags>
+                <tag name="date" tagType="syslogDate">
+                 <description>
+        <localized_desc language="en">The date of the log</localized_desc></description>
+                 <substitute>DATE</substitute>
+                </tag>
+                <tag name="localhost" tagType="Anything">
+                 <description>
+        <localized_desc language="en">the local ip address/hostname</localized_desc></description>
+                 <substitute>LOCAL</substitute>
+                </tag>
                 <tag name="invalid" tagType="Anything">
                  <description>
         <localized_desc language="en">the outcome of the connection attempt</localized_desc>
@@ -118,7 +96,6 @@ else:
                   <callback>decode_action</callback>
                  </callbacks>
                 </tag>
-
                 <tag name="user" tagType="Anything">
                  <description>
         <localized_desc language="en">the user requesting the connection</localized_desc>
@@ -129,12 +106,12 @@ else:
                  <description>
         <localized_desc language="en">the inbound connection's IP address</localized_desc>
         <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
-                 <substitute>IP</substitute>
+                 <substitute>SIP</substitute>
                 </tag>
             </tags>
             <examples>
                 <example>
-                     <text>Invalid user admin from 218.49.183.17</text>
+                     <text>Apr 20 02:14:33 140.117.205.1 sshd[9196]: Invalid user admin from 218.49.183.17</text>
                      <expectedTags>
                           <expectedTag name="action">fail</expectedTag>
                           <expectedTag name="user">admin</expectedTag>
@@ -145,30 +122,37 @@ else:
             </examples>
         </pattern>
 
-
-        <pattern name="sshd-001">
+        <pattern name="sshd-002">
             <description>
-        <localized_desc language="en">A generic sshd log line.</localized_desc>
-        <localized_desc language="fr">Une notification standard de connexion à un serveur SSH.</localized_desc></description>
-            <text>LOGDATE LIP sshd\[[0-9]+\]\: ACTION METHOD for(?: invalid user)? USER from SIP port [0-9]+ ssh[0-9]</text>
+        <localized_desc language="en">A generic sshd log line.(fedora)</localized_desc>
+            </description>
+<!--            <text>DATE SOURCE PROGRAM\[[0-9]+\]: ACTION METHOD for(?: invalid user)? USER from SIP port [0-9]+ ssh[0-9]</text>-->
+            <text>ACTION METHOD for(?: invalid user)? USER from SIP port [0-9]+ ssh[0-9]</text>
             <tags>
-
-                <tag name="syslogDate" tagType="syslogDate">
-                 <description>
-        <localized_desc language="en">the inbound connection's IP address</localized_desc>
-        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
-                 <substitute>LOGDATE</substitute>
+<!--                <tag name="body" tagType="Anything">
+                <substitute>BODY</substitute>
                 </tag>
-                <tag name="local_ip" tagType="IP">
+                <tag name="date" tagType="syslogDate">
                  <description>
-        <localized_desc language="en">the inbound connection's IP address</localized_desc>
-        <localized_desc language="fr">l'IP entrante de la connexion</localized_desc></description>
-                 <substitute>LIP</substitute>
-				</tag>
+        <localized_desc language="en">The date of the log</localized_desc></description>
+                 <substitute>DATE</substitute>
+                </tag>
+                <tag name="source" tagType="syslogSource">
+                 <description>
+         <localized_desc language="en">the log's source</localized_desc>
+         <localized_desc language="fr">l'?quipement d'origine de l'?v?nement</localized_desc></description>
+                 <substitute>SOURCE</substitute>
+                </tag>
+                <tag name="program" tagType="syslogProgram">
+                 <description>
+         <localized_desc language="en">the log's program</localized_desc>
+         <localized_desc language="fr">le programme ? l'origine de l'?v?nement</localized_desc>
+                 </description>
+                 <substitute>PROGRAM</substitute>
+                </tag>-->
                 <tag name="__action" tagType="ActionTag">
                  <description>
-        <localized_desc language="en">the outcome of the connection attempt</localized_desc>
-        <localized_desc language="fr">le résultat de la tentative de connexion</localized_desc></description>
+        <localized_desc language="en">the outcome of the connection attempt</localized_desc></description>
                  <substitute>ACTION</substitute>
                  <callbacks>
                   <callback>decode_action</callback>
@@ -177,7 +161,7 @@ else:
                 <tag name="method" tagType="Anything">
                  <description>
         <localized_desc language="en">the connection method (password or key)</localized_desc>
-        <localized_desc language="fr">la méthode de connexion utilisée (mot de passe ou clé asymétrique)</localized_desc></description>
+                 </description>
                  <substitute>METHOD</substitute>
                 </tag>
                 <tag name="user" tagType="Anything">
@@ -197,8 +181,6 @@ else:
                 <example>
                      <text>Apr 13 15:16:35 140.117.241.171 sshd[18396]: Failed password for admin from 218.49.183.17 port 49468 ssh2</text>
                      <expectedTags>
-                          <expectedTag name="syslogDate">Apr 13 15:16:35</expectedTag>
-                          <expectedTag name="local_ip">140.117.241.171</expectedTag>
                           <expectedTag name="action">fail</expectedTag>
                           <expectedTag name="method">password</expectedTag>
                           <expectedTag name="user">admin</expectedTag>
@@ -209,7 +191,7 @@ else:
             </examples>
         </pattern>
 
-        <pattern name="sshd-002">
+<!--        <pattern name="sshd-003">
             <description>
         <localized_desc language="en">A generic sshd log line.</localized_desc>
         <localized_desc language="fr">Une notification standard de connexion à un serveur SSH.</localized_desc></description>
@@ -255,7 +237,7 @@ else:
                      </expectedTags>
                 </example>
             </examples>
-        </pattern>
+        </pattern>-->
 
     </patterns>
 </normalizer>
