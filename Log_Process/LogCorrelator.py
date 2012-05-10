@@ -10,7 +10,7 @@ except ImportError:
 from datetime import datetime
 from datetime import timedelta
 
-
+ThesisRun_PATH = '/home/executor/Thesis_run/'
 FailedTable = 'FailedRecord'
 AcceptTable = 'AcceptRecord'
 DEBUG = 0
@@ -18,6 +18,30 @@ DEBUG = 0
 TimeSlotLength = 1
 Threshold_Number_of_Attempts = 10#Threshold of number of each IP trying to attack host
 Threshold_Number_of_Users = 3 #Threshold of number of each IP trying to login with users
+
+#Mark either the BFA or the BFAS or the Login
+def StatusMarker(Qcc,SlotStart,Period,IP,STATUS):
+    #
+    Qcc.execute('CREATE TABLE IF NOT EXISTS IPObservation ( Time text(100), SrcIP text(100), DstIP text(100) DEFAULT [0], ScanCount integer DEFAULT [0], BFACount integer DEFAULT [0], BFASCount BOOLEAN DEFAULT [0], LoginCount integer DEFAULT [0])') 
+    #The STATUS makes difference here, BFA/LOGIN will update IPObservation differently.
+    if STATUS == 'BFA':
+	Qcc.execute('SELECT BFACount FROM IPObservation WHERE Time = ? AND SrcIP = ?',(SlotStart,IP))
+        verify = Qcc.fetchone()
+        if verify is None:
+	    #This record hasn't been record yet.
+	    Qcc.execute('INSERT INTO IPObservation(Time,SrcIP,BFACount) VALUES (?,?,?)',(SlotStart,IP,1))
+        else:
+	    #Update the record
+	    Qcc.execute('UPDATE IPObservation SET BFACount = ? WHERE Time = ? AND SrcIP = ?',(verify[0]+1,SlotStart,IP))
+    elif STATUS == 'LOGIN':
+	Qcc.execute('SELECT LoginCount FROM IPObservation WHERE Time = ? AND SrcIP = ?',(SlotStart,IP))
+        verify = Qcc.fetchone()
+        if verify is None:
+	    #This record hasn't been record yet.
+	    Qcc.execute('INSERT INTO IPObservation(Time,SrcIP,LoginCount) VALUES (?,?,?)',(SlotStart,IP,1))
+        else:
+	    #Update the record
+	    Qcc.execute('UPDATE IPObservation SET LoginCount = ? WHERE Time = ? AND SrcIP = ?',(verify[0]+1,SlotStart,IP))
 
 
 #Find the date of the first record and the last record, counting them according to the records.
@@ -89,6 +113,7 @@ def LogCounter(Qcc,StarTime,EndTime,TableName,Type):
 		    #We could change the alert decision here.
 		    if TooManyTries or TooManyAccounts:
 			print "BFA!We are BFA by ",IP[0],"! in ", SlotStart, SlotStart+SlotDuration
+			StatusMarker(Qcc,SlotStart,SlotStart+SlotDuration,IP[0],"BFA")
 
 	    #We add SlotDuration to SlotStart to push the timestamp forward
 	    SlotStart = SlotStart + SlotDuration
@@ -99,7 +124,8 @@ def LogCounter(Qcc,StarTime,EndTime,TableName,Type):
 		continue
 	    else:
 		for IP in AcceptIPs:
-		    print "Put ", IP[0], "into the DB"
+		    print IP[0],"Logged In" 
+		    StatusMarker(Qcc,SlotStart,SlotStart+SlotDuration,IP[0],"LOGIN")
 		    """
 		    Qcc.execute("SELECT COUNT(Time) FROM "+TableName+" WHERE IP = ?",(IP))
 		    count =  Qcc.fetchone()
@@ -112,7 +138,7 @@ def LogCounter(Qcc,StarTime,EndTime,TableName,Type):
 	    SlotStart = SlotStart + SlotDuration
 
 #MAIN
-Queryconn = sqlite3.connect('IPDB.db')
+Queryconn = sqlite3.connect(ThesisRun_PATH+'HorusDB.db')
 Qcc = Queryconn.cursor()
 FailedIP = []
 
@@ -127,6 +153,15 @@ else:
 #Find the date through Timefinder for now, the StarTime, EndTime could be set by other methods in the future.
     StarTime, EndTime = Timefinder(Qcc,FailedTable)
     LogCounter(Qcc,StarTime,EndTime,FailedTable,"Failed")
+
+Qcc.execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?",(AcceptTable,))
+verify = Qcc.fetchone()
+if verify is None:
+#If the table is not exist
+    print "The '%s' table is not exist" %(AcceptTable)
+else:
+#The table exist, keep working...
+#Find the date through Timefinder for now, the StarTime, EndTime could be set by other methods in the future.
     StarTime, EndTime = Timefinder(Qcc,AcceptTable)
     LogCounter(Qcc,StarTime,EndTime,AcceptTable,"Accept")
 

@@ -1,3 +1,4 @@
+ThesisRun_PATH='/home/executor/Thesis_run/'
 DEBUG = 0
 try:
     try:
@@ -8,14 +9,14 @@ except ImportError:
     print "sqlite3 or pysqlite2 not found"
 
 def LogintoDB(failed_logins,accept_logins,Source):
-    conn = sqlite3.connect('IPDB.db')
+    conn = sqlite3.connect(ThesisRun_PATH+'HorusLog.db')
     cc = conn.cursor()
 
     cc.execute('CREATE TABLE IF NOT EXISTS FailedRecord ( Source text(100), Time timestamp(8), IP text(100), User text(100), Count integer DEFAULT [0])')
     cc.execute('CREATE TABLE IF NOT EXISTS AcceptRecord ( Source text(100), Time timestamp(8), IP text(100), User text(100), Count integer DEFAULT [0])')
     """DB Connection"""
 
-    Logconn = sqlite3.connect('IPDB.db')
+    Logconn = sqlite3.connect(ThesisRun_PATH+'HorusLog.db')
     Lcc = Logconn.cursor()
 
     for record in failed_logins:
@@ -23,13 +24,17 @@ def LogintoDB(failed_logins,accept_logins,Source):
 	IP = record[1]
 	User = record[2]
 	#If Time+IP+ID exist, don't insert again, just count it.
+	if DEBUG >= 3:
+	    print "FailedRecord Querying..." , Time, IP, User
 	Lcc.execute("SELECT Count FROM FailedRecord WHERE Source = ? AND Time = ? AND IP = ? AND User = ?",(Source, Time,IP,User))
 	verify = Lcc.fetchone()
 	if verify is None:
-	    Lcc.execute('INSERT INTO FailedRecord(Source, Time,IP,User) VALUES (?, ?,?,?)',(Source, Time,IP,User))
+	    if DEBUG >= 3:
+		print "verify is None", Time, IP, User
+	    Lcc.execute('INSERT INTO FailedRecord(Source, Time,IP,User) VALUES (?,?,?,?)',(Source, Time,IP,User))
 	else:
 	    Count = verify[0] + 1
-	    Lcc.execute('UPDATE FailedRecord SET Count = ? WHERE Source = ? AND Time = ? AND IP = ? AND User = ?',(Source, Count,Time,IP,User))
+	    Lcc.execute('UPDATE FailedRecord SET Count = ? WHERE Source = ? AND Time = ? AND IP = ? AND User = ?',(Count,Source,Time,IP,User))
 
     for record in accept_logins:
 	Time = record[0]
@@ -42,7 +47,7 @@ def LogintoDB(failed_logins,accept_logins,Source):
 	    Lcc.execute('INSERT INTO AcceptRecord(Source, Time,IP,User) VALUES (?,?,?,?)',(Source,Time,IP,User))
 	else:
 	    Count = verify[0] + 1
-	    Lcc.execute('UPDATE AcceptRecord SET Count = ? WHERE Source = ? AND Time = ? AND IP = ? AND User = ?',(Source,Count,Time,IP,User))
+	    Lcc.execute('UPDATE AcceptRecord SET Count = ? WHERE Source = ? AND Time = ? AND IP = ? AND User = ?',(Count,Source,Time,IP,User))
 
     Lcc.close()
     Logconn.commit()
