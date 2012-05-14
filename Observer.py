@@ -52,7 +52,7 @@ def FindJoint(Time,Victim,AttackSource,Fcc,UserList):
 #First we get the Src IP list
 Query = Hcc.execute('SELECT DISTINCT SrcIP FROM IPObservation ORDER BY Time ASC')
 IPList = list(Query)
-Observation = Hcc.execute('SELECT * FROM IPObservation ORDER BY Time ASC')
+Observation = Hcc.execute("SELECT * FROM IPObservation WHERE DstIP != '140.117.205.1' OR DstIP != '140.117.205.10' OR DstIP != '140.117.205.5'ORDER BY Time ASC")
 Obfile = open('Obfile','w')
 for Item in Observation:
 #    print Item
