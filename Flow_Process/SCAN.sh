@@ -1,36 +1,50 @@
 #!/bin/bash
-./scanobserver.sh /netflow/in/2012-06-01
-python ./ScanReporter.py /netflow/in/2012-06-01/ScanCount/
-rm -rf /netflow/in/2012-06-01/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-02
-python ./ScanReporter.py /netflow/in/2012-06-02/ScanCount/
-rm -rf /netflow/in/2012-06-02/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-03
-python ./ScanReporter.py /netflow/in/2012-06-03/ScanCount/
-rm -rf /netflow/in/2012-06-03/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-04
-python ./ScanReporter.py /netflow/in/2012-06-04/ScanCount/
-rm -rf /netflow/in/2012-06-04/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-05
-python ./ScanReporter.py /netflow/in/2012-06-05/ScanCount/
-rm -rf /netflow/in/2012-06-05/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-06
-python ./ScanReporter.py /netflow/in/2012-06-06/ScanCount/
-rm -rf /netflow/in/2012-06-06/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-07
-python ./ScanReporter.py /netflow/in/2012-06-07/ScanCount/
-rm -rf /netflow/in/2012-06-07/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-08
-python ./ScanReporter.py /netflow/in/2012-06-08/ScanCount/
-rm -rf /netflow/in/2012-06-08/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-09
-python ./ScanReporter.py /netflow/in/2012-06-09/ScanCount/
-rm -rf /netflow/in/2012-06-09/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-10
-python ./ScanReporter.py /netflow/in/2012-06-10/ScanCount/
-rm -rf /netflow/in/2012-06-10/ScanCount/
-./scanobserver.sh /netflow/in/2012-06-11
-python ./ScanReporter.py /netflow/in/2012-06-11/ScanCount/
-rm -rf /netflow/in/2012-06-11/ScanCount/
-
+./scanobserver.sh /netflow/in/2012-06-15
+python ./ScanReporter.py /netflow/in/2012-06-15/ScanCount/
+rm -rf /netflow/in/2012-06-15/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-16
+python ./ScanReporter.py /netflow/in/2012-06-16/ScanCount/
+rm -rf /netflow/in/2012-06-16/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-17
+python ./ScanReporter.py /netflow/in/2012-06-17/ScanCount/
+rm -rf /netflow/in/2012-06-17/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-18
+python ./ScanReporter.py /netflow/in/2012-06-18/ScanCount/
+rm -rf /netflow/in/2012-06-18/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-19
+python ./ScanReporter.py /netflow/in/2012-06-19/ScanCount/
+rm -rf /netflow/in/2012-06-19/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-20
+python ./ScanReporter.py /netflow/in/2012-06-20/ScanCount/
+rm -rf /netflow/in/2012-06-20/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-21
+python ./ScanReporter.py /netflow/in/2012-06-21/ScanCount/
+rm -rf /netflow/in/2012-06-21/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-22
+python ./ScanReporter.py /netflow/in/2012-06-22/ScanCount/
+rm -rf /netflow/in/2012-06-22/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-23
+python ./ScanReporter.py /netflow/in/2012-06-23/ScanCount/
+rm -rf /netflow/in/2012-06-23/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-24
+python ./ScanReporter.py /netflow/in/2012-06-24/ScanCount/
+rm -rf /netflow/in/2012-06-24/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-25
+python ./ScanReporter.py /netflow/in/2012-06-25/ScanCount/
+rm -rf /netflow/in/2012-06-25/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-26
+python ./ScanReporter.py /netflow/in/2012-06-26/ScanCount/
+rm -rf /netflow/in/2012-06-26/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-27
+python ./ScanReporter.py /netflow/in/2012-06-27/ScanCount/
+rm -rf /netflow/in/2012-06-27/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-28
+python ./ScanReporter.py /netflow/in/2012-06-28/ScanCount/
+rm -rf /netflow/in/2012-06-28/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-29
+python ./ScanReporter.py /netflow/in/2012-06-29/ScanCount/
+rm -rf /netflow/in/2012-06-29/ScanCount/
+./scanobserver.sh /netflow/in/2012-06-30
+python ./ScanReporter.py /netflow/in/2012-06-30/ScanCount/
+rm -rf /netflow/in/2012-06-30/ScanCount/
 

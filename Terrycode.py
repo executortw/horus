@@ -1,7 +1,3 @@
-"""
-This file is to read data from your log correlated database, which is called HorusDB.db at first, and present a file to show the IP ,it's status and the related time of observed status.
-You will need to specify the time duration(start time and end time), and the result will write the file named as "Obfile"
-"""
 try:
     try:
         from pysqlite2 import dbapi2 as sqlite3
@@ -55,14 +51,10 @@ def FindJoint(Time,Victim,AttackSource,Fcc,UserList):
 
 #main start from here
 #First we get the Src IP list
-QSTime = raw_input('Query Start Time?:<ex:2012-05-20 01:00:00>')
-print QSTime
-QETime = raw_input('Query End Time?:<ex:2012-05-20 01:00:00>')
 Query = Hcc.execute('SELECT DISTINCT SrcIP FROM IPObservation ORDER BY Time ASC')
 IPList = list(Query)
-#Observation = Hcc.execute("SELECT * FROM IPObservation WHERE (DstIP != '140.117.205.1' OR DstIP != '140.117.205.10' OR DstIP != '140.117.205.5') AND Time > ? AND Time < ? ORDER BY Time ASC",(QSTime,QETime))
-Observation = Hcc.execute("SELECT * FROM IPObservation WHERE Time > ? AND Time < ? ORDER BY Time ASC",(QSTime,QETime))
-Obfile = open('Obfile','w')
+Observation = Hcc.execute("SELECT * FROM IPObservation WHERE DstIP != '140.117.205.1' OR DstIP != '140.117.205.10' OR DstIP != '140.117.205.5'ORDER BY Time ASC")
+#Obfile = open('Obfile','w')
 for Item in Observation:
 #I put the column returned by Hcc into variable with meaningful name
 #    print Item
@@ -76,28 +68,25 @@ for Item in Observation:
     if Scan != 0:
 	country = locator.country_name_by_addr(AttackSource)
 #	Obfile.write('%s|%s|1\n'%(Time,AttackSource))
-	Obfile.write('%s|%s|%s|1\n'%(Time,Victim,AttackSource))
-	print "At:", Time, AttackSource, " is Scanning","from ",country
+	print Time,",SEVERITY,Scanning,CATEGORY,ACTION,HITCOUNT,",AttackSource,",SRCPORT,140.117.0.0,DSTPORT"
     elif BFAS != 0:
 #	Obfile.write('%s|%s|3\n'%(Time,AttackSource))
-	Obfile.write('%s|%s|%s|3\n'%(Time,Victim,AttackSource))
 	country = locator.country_name_by_addr(AttackSource)
-	print "\033[93mAt:", Time, Victim, " is BFASed by ", AttackSource,"from ",country,"\033[0m"
+	#print Time, Victim, " is BFASed by ", AttackSource,"from ",country,"\033[0m"
+	print Time,",SEVERITY,BFAS,CATEGORY,ACTION,HITCOUNT,",AttackSource,",SRCPORT,",Victim,",DSTPORT"
 	#Because we got a BFAS(Brute Force Attack Success) here, we need to find what user account is logged in here.
 	UserList = FindUser(Time,Victim,AttackSource,Fcc)
 #	Obfile.write('%s|%s|%s\n'%(Time,AttackSource,FindJoint(Time,Victim,AttackSource,Fcc,UserList)))
-	Obfile.write('%s|%s|%s|%s\n'%(Time,Victim,AttackSource,FindJoint(Time,Victim,AttackSource,Fcc,UserList)))
 	
     elif BFA != 0 & Login == 0:
 #	Obfile.write('%s|%s|2\n'%(Time,AttackSource))
-	Obfile.write('%s|%s|%s|2\n'%(Time,Victim,AttackSource))
 	country = locator.country_name_by_addr(AttackSource)
-	print "At:", Time, Victim, " is BFAed by ", AttackSource,"from ",country
+	print Time,",SEVERITY,BFA,CATEGORY,ACTION,HITCOUNT,",AttackSource,",SRCPORT,",Victim,",DSTPORT"
+	#print Time, Victim, " is BFAed by ", AttackSource,"from ",country
     elif Login != 0 :
 #	Obfile.write('%s|%s|4\n'%(Time,AttackSource))
-	Obfile.write('%s|%s|%s|4\n'%(Time,Victim,AttackSource))
 	country = locator.country_name_by_addr(AttackSource)
-	print "At:", Time, Victim, " is Login by ", AttackSource,"from ",country
+#	print Time, Victim, " is Login by ", AttackSource,"from ",country
 
 
 Fcc.close()

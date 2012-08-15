@@ -99,7 +99,7 @@ def LogCounter(Qcc,StarTime,EndTime,TableName,Type):
 		    TooManyAccounts = 0
 
 		    #Find time of login attemps tried by each attacker
-		    Qcc.execute("SELECT COUNT(IP) FROM "+TableName+" WHERE Source = ? AND IP = ?",(IP[0],IP[1]))
+		    Qcc.execute("SELECT COUNT(IP) FROM "+TableName+" WHERE Source = ? AND IP = ? AND Time > ? AND Time < ?",(IP[0],IP[1],SlotStart,SlotStart+SlotDuration))
 		    AttackNum = Qcc.fetchone()
 		    if DEBUG >= 2:
 			print "IP:", IP, "Attack Time:", AttackNum
@@ -107,7 +107,7 @@ def LogCounter(Qcc,StarTime,EndTime,TableName,Type):
 		    if AttackNum >= Threshold_Number_of_Attempts:
 			TooManyTries = 1
 		    #We want to know how many user has been tried by the IP in one time slot
-		    Qcc.execute("SELECT COUNT(DISTINCT User) FROM "+TableName+" WHERE Source = ? AND  IP = ?",(IP[0],IP[1]))
+		    Qcc.execute("SELECT COUNT(DISTINCT User) FROM "+TableName+" WHERE Source = ? AND  IP = ? AND Time > ? AND Time < ?",(IP[0],IP[1],SlotStart,SlotStart+SlotDuration))
 		    NumberofUser = Qcc.fetchone()
 		    if DEBUG >= 2:
 			print "IP:", IP, "User tried:", NumberofUser
