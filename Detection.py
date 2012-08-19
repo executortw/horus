@@ -15,16 +15,16 @@ def Detection(IP,Observations):
     Result = Horushmm.analyze(Observations)
     try:
 	JA = Result.index("JointAttack")
-	return 1
+	return 2
 #	print "JA! Put Alert raiser here!"
     except ValueError:
 	try:
 	    Intru = Result.index("Intrusion")
-	    Identify_module.Identify_mod(IP)
+#	    Identify_module.Identify_mod(IP)
 	    return 1
 	    #print "Intrusion! Put Alert raiser here!"
 	except ValueError:
-	    print "normal"
+#	    print "normal"
 	    return 0
 
 #    print Result

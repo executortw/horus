@@ -26,7 +26,9 @@ AcceptTable = 'AcceptRecord'
 
 IPList = []
 IPList2 = []
-AlertList = []
+JAList = []
+IntList = []
+NoList = []
 AppendList = []
 IdentSwitch = "N"
 IdentOrNot = "N"
@@ -96,9 +98,12 @@ FUconn = sqlite3.connect(ThesisRun_PATH+'HorusLog.db')
 Fcc = FUconn.cursor()
 ItemNumber = len(IPList)
 IPPair = {}
+NormalIP = []
+IntrusionIP = []
+JAIP = []
 ASource = IPList[0] 
 IdentSwitch = raw_input("[Evaluation]Do you need to Ident the IPPair?(y/N)")
-if IdentSwitch == 'Y' || IdentSwitch == 'y':
+if IdentSwitch == 'Y' or 'y':
     for i in range(len(IPList)):
 	for j in range(len(IPList[i])-1):
 	    Connection = IPList[i][0] +"<->"+ IPList[i][j+1][0]
@@ -110,9 +115,16 @@ if IdentSwitch == 'Y' || IdentSwitch == 'y':
 	    print 'Accept Record:'
 	    for record in list(ACresult):
 	       print record
-	    Question = 'What condiction '+Connection+' is? Negative(0),Positive(1)'
+	    Question = 'What condiction '+IPList[i][0]+' is? Normal(0), Intrusion(1), JointAttack(2):'
 	    Ident = raw_input(Question)
-	    IPPair[Connection] = Ident
+	    if Ident is "0":
+		NormalIP.append(IPList[i][0])
+	    elif Ident is "1":
+		IntrusionIP.append(IPList[i][0])
+	    elif Ident is "2":
+		JAIP.append(IPList[i][0])
+
+	  #  IPPair[Connection] = Ident
 """
 	AppendArr = [IPList[i][0],IPList[i][j+1][0]]
 	IPPair.append(AppendArr)"""
@@ -135,21 +147,88 @@ for sublist in IPList:
     for subsublist in sublist:
 	subsublist.pop(0)
 #	print "poped subsublist",subsublist
-	if Detection.Detection(IP,subsublist) == 1:
-	    AlertList.append(IP)
+	DetectionResult = Detection.Detection(IP,subsublist)
+	if DetectionResult is  2:
+	    JAList.append(IP)
+	    break
+	elif DetectionResult is 1:
+	    IntList.append(IP)
 	    break
 	else:
-	    continue
+	    NoList.append(IP)
+	    break
 IdentOrNot = raw_input("Do you want to identify alert list? (y/N) ")
 if IdentOrNot == "y":
     for IP in AlertList:
 	Identify_module.Identify_mod(IP)
-else:
-    PrintOrNot = raw_input("Do list need to be printed? (y/N) ")
-    if PrintOrNot == "y":
-	print "AlertList:"
-	for IP in AlertList:
-	    print IP
+
+PrintOrNot = raw_input("Do list need to be printed? (y/N) ")
+if PrintOrNot == "y":
+    print "AlertList:"
+    for IP in AlertList:
+	print IP
+
+"""Evaluation!"""
+print "JAIP:",JAIP
+print "===="
+print "JAList:",JAList
+print "===="
+print "IntrusionIP:",IntrusionIP
+print "===="
+print "IntList:",IntList
+print "===="
+print "NormalIP:",NormalIP
+print "===="
+print "NoList:",NoList
+print "===="
+
+"""Comparison section"""
+print "Human Definition Parts:"
+print "Lenght of Joint attack IPs:",len(JAIP)
+print "Lenght of Intrusion IPs:",len(IntrusionIP)
+print "Lenght of Normal IPs:",len(NormalIP)
+print "==============="
+print "System Detection Parts:"
+print "Lenght of Joint attack IPs:",len(JAList)
+print "Lenght of Intrusion IPs:",len(IntList)
+print "Lenght of Normal IPs:",len(NoList)
+
+print "Let's compare the definition parts and Detection results."
+
+def RemainPercentage(TargetList,TListLength):
+    RemainLengthList = len(TargetList)
+    RemainPercentage = float(RemainLengthList)/float(TListLength)
+    return RemainPercentage
+
+
+def ListComparison(List1,List2):
+    ListLength1 = len(List1)
+    ListLength2 = len(List2)
+    if ListLength1 > ListLength2:
+	for item in List2:
+	    try:
+		List1.index(item)
+	    except ValueError:
+		continue
+	    List1.remove(item)
+	result = RemainPercentage(List1,ListLength1)
+	print "Percentage of ",1 - result
     
+    else:
+	for item in List1:
+	    try:
+		List2.index(item)
+	    except ValueError:
+		continue
+	    List2.remove(item)
+	result = RemainPercentage(List2,ListLength2)
+	print "Percentage of ",1 - result
+
+ListComparison(JAIP,JAList)
+ListComparison(IntrusionIP,IntList)
+ListComparison(NormalIP,NoList)
+
+
+
 fd.close()
 fd2.close()
