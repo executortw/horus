@@ -98,7 +98,7 @@ ItemNumber = len(IPList)
 IPPair = {}
 ASource = IPList[0] 
 IdentSwitch = raw_input("[Evaluation]Do you need to Ident the IPPair?(y/N)")
-if IdentSwitch == 'Y' || IdentSwitch == 'y':
+if IdentSwitch == 'Y' or IdentSwitch == 'y' :
     for i in range(len(IPList)):
 	for j in range(len(IPList[i])-1):
 	    Connection = IPList[i][0] +"<->"+ IPList[i][j+1][0]

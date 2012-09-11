@@ -15,7 +15,7 @@ def Detection(IP,Observations):
     Result = Horushmm.analyze(Observations)
     try:
 	JA = Result.index("JointAttack")
-	return 2
+	return 1
 #	print "JA! Put Alert raiser here!"
     except ValueError:
 	try:

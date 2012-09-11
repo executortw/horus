@@ -102,8 +102,15 @@ NormalIP = []
 IntrusionIP = []
 JAIP = []
 ASource = IPList[0] 
-IdentSwitch = raw_input("[Evaluation]Do you need to Ident the IPPair?(y/N)")
-if IdentSwitch == 'Y' or 'y':
+
+SectionSwitch = raw_input("Ident raw data(1) or read IPPair(2) from temp file to evaluate?(1/2)")
+if SectionSwitch == '1':
+    NormalIPfd = open('NormalIP-temp','r+')
+    IntrusionIPfd = open('IntrusionIP-temp','r+')
+    JAIPfd = open('JAIP-temp','r+')
+
+#    IdentSwitch = raw_input("[Evaluation]Do you need to Ident the IPPair?(y/N)")
+#    if IdentSwitch == 'Y' or 'y':
     for i in range(len(IPList)):
 	for j in range(len(IPList[i])-1):
 	    Connection = IPList[i][0] +"<->"+ IPList[i][j+1][0]
@@ -118,13 +125,45 @@ if IdentSwitch == 'Y' or 'y':
 	    Question = 'What condiction '+IPList[i][0]+' is? Normal(0), Intrusion(1), JointAttack(2):'
 	    Ident = raw_input(Question)
 	    if Ident is "0":
-		NormalIP.append(IPList[i][0])
+		#see if the IP is already existed.
+		try: 
+		    NormalIP.index(IPList[i][0])
+		    continue
+		except ValueError:
+		    NormalIP.append(IPList[i][0])
 	    elif Ident is "1":
-		IntrusionIP.append(IPList[i][0])
+		#see if the IP is already existed.
+		try: 
+		    IntrusionIP.index(IPList[i][0])
+		    continue
+		except ValueError:
+		    IntrusionIP.append(IPList[i][0])
 	    elif Ident is "2":
-		JAIP.append(IPList[i][0])
-
+		#see if the IP is already existed.
+		try:
+		    JAIP.index(IPList[i][0])
+		    continue
+		except ValueError:
+		    JAIP.append(IPList[i][0])
 	  #  IPPair[Connection] = Ident
+    #Write Identified IPPair to file
+    for item in NormalIP:
+	NormalIPfd.write("%s\n" % item)
+    for item in IntrusionIP:
+	IntrusionIPfd.write("%s\n" % item)
+    for item in JAIP:
+	JAIPfd.write("%s\n" % item)
+elif SectionSwitch == '2':
+    NormalIPfd = open('NormalIP-temp','r')
+    IntrusionIPfd = open('IntrusionIP-temp','r')
+    JAIPfd = open('JAIP-temp','r')
+    for line in NormalIPfd:
+	NormalIP.append(line.rstrip("\n"))
+    for line in IntrusionIPfd:
+	IntrusionIP.append(line.rstrip("\n"))
+    for line in JAIPfd:
+	JAIP.append(line.rstrip("\n"))
+
 """
 	AppendArr = [IPList[i][0],IPList[i][j+1][0]]
 	IPPair.append(AppendArr)"""
@@ -196,9 +235,12 @@ print "Lenght of Normal IPs:",len(NoList)
 print "Let's compare the definition parts and Detection results."
 
 def RemainPercentage(TargetList,TListLength):
-    RemainLengthList = len(TargetList)
-    RemainPercentage = float(RemainLengthList)/float(TListLength)
-    return RemainPercentage
+    if TListLength <= 0:
+	return 0
+    else:
+        RemainLengthList = len(TargetList)
+	RemainPercentage = float(RemainLengthList)/float(TListLength)
+        return RemainPercentage
 
 
 def ListComparison(List1,List2):
@@ -229,6 +271,8 @@ ListComparison(IntrusionIP,IntList)
 ListComparison(NormalIP,NoList)
 
 
-
+NormalIPfd.close()
+IntrusionIPfd.close()
+JAIPfd.close()
 fd.close()
 fd2.close()
